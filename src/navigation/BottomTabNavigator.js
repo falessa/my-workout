@@ -6,10 +6,12 @@ import HelpNavigator from './HelpNavigator'
 const Tab = createBottomTabNavigator();
 
 function ButtomTabNavigator() {
-    <Tab.Navigator>
-        <Tab.Screen name='PlansHomeNavigator' component={PlansNavigator}/>
-        <Tab.Screen name='HelpNavigator' component={HelpNavigator} />
-    </Tab.Navigator>
+    return (
+        <Tab.Navigator>
+            <Tab.Screen name='PlansHomeNavigator' component={PlansNavigator}/>
+            <Tab.Screen name='HelpNavigator' component={HelpNavigator} />
+        </Tab.Navigator>
+    )
 }
 
 export default ButtomTabNavigator;

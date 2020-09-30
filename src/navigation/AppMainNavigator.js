@@ -9,8 +9,8 @@ const Stack = createStackNavigator();
 function AppMainNavigator() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRoutName='Plans'>
-                <Stack.Screen name='Plans' component={PlansHomeScreen} />
+            <Stack.Navigator>
+                {/* <Stack.Screen name='Plans' component={PlansHomeScreen} /> */}
                 <Stack.Screen name='BottomTab' component={BottomTabNavigator} />
             </Stack.Navigator>
         </NavigationContainer>
