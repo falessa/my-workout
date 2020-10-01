@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     }
 })
 
-export default ({ navigation }) => {
+export default function App() {
     return (
         <View style={styles.container}>
             <TextInput style={styles.input} placeholder='Enter the plan name'/>

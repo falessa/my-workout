@@ -1,8 +1,9 @@
 import React from 'react';
-import AppMainNavigator from './navigation/AppMainNavigator';
+// import AppMainNavigator from './navigation/AppMainNavigator';
+import BottomTabNavigator from './navigation/BottomTabNavigator'
 
 export const App = () => {
     return (
-        <AppMainNavigator />
+        <BottomTabNavigator />
     )
 }

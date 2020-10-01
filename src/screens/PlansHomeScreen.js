@@ -1,10 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-export default function App() {
+export default function App({ navigation }) {
+  console.log(navigation)
   return (
     <View style={styles.container}>
       <Text>Plans home screen!</Text>
+      <Button title='Add plan' onPress={() => navigation.navigate('AddPlanName')}/>
     </View>
   );
 }
