@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App({ navigation }) {
-  console.log(navigation)
   return (
     <View style={styles.container}>
       <Text>Plans home screen!</Text>
