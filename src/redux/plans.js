@@ -1,5 +1,5 @@
 const initialState = [
-    { id: '1', name: 'Plan September 2020', exercises: 'this should be an array'}
+    { id: '1', name: 'Plan September 2020', frequency:'3 days/week', exercises: 'this should be an array', creationDate: '24/08/2020'}
 ]
 
 // action constants
