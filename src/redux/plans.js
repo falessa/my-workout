@@ -5,6 +5,7 @@ const initialState = [
 // action constants
 const ADD_PLAN = 'ADD_PLAN'
 const DELETE_PLAN = 'DELETE_PLAN'
+const RESTORE_PLANS = 'RESTORE_PLANS'
 
 export const addPlan = plan => ({
     type: ADD_PLAN,
@@ -16,6 +17,11 @@ export const deletePlan = idPlan => ({
     id: idPlan
 })
 
+// temporal just for testing
+export const resetPlansToInitialState = () => ({
+    type: RESTORE_PLANS
+})
+
 export default (state = initialState, action) => {
     switch(action.type) {
         case ADD_PLAN: {
@@ -25,6 +31,10 @@ export default (state = initialState, action) => {
         case DELETE_PLAN: {
             console.log('DELETE PLAN')
             return state // define logic
+        }
+        case RESTORE_PLANS: {
+            console.log('RESTORING PLANS TO INITIAL STATE (testing purposes)')
+            return initialState
         }
         default: {
             return state
