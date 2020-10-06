@@ -19,7 +19,52 @@ export default function App({ navigation }) {
 
       {/* <Text>Plans screen works with redux!!!</Text>
       <Button title="Add plan" onPress={() => dispatch(addPlan(
-        { id: '2', name: 'Plan October 2020', frequency:'3 days/week', exercises: 'this should be an array', creationDate: '24/09/2020'}
+            { 
+              id: '1', 
+              name: 'Plan September 2020',
+              daysPerWeek:'3',
+              planDetails: {
+                  exercises: [
+                      {
+                          musclesZone: 'Femorales y gluteos',
+                          day: 1,
+                          exercises: [
+                              {
+                                  name: 'Peso muerto piernas semiflexionadas',
+                                  sets: 4,
+                                  repetitions: 12,
+                                  kgs: 10
+                              },
+                              {
+                                  name: 'Peso muerto a 1 pierna + extension de cadera en cajon',
+                                  sets: 3,
+                                  repetitions: '12 + 15',
+                                  kgs: 10
+                              }
+                          ],
+                      },
+                      {
+                          musclesZone: 'Tren superior',
+                          day: 2,
+                          exercises: [
+                              {
+                                  name: 'Press plano + remo con mancuernas',
+                                  sets: 4,
+                                  repetitions: '12 + 12',
+                                  kgs: 6
+                              },
+                              {
+                                  name: 'Apertura inclinada + remo invertido TRX',
+                                  sets: 3,
+                                  repetitions: '12 + 8/12',
+                                  kgs: 10
+                              }
+                          ],
+                      },
+                  ]
+              },
+              creationDate: '24/08/2020'
+          }
         ))}
       />
       <Button title="Reset store" onPress={() => dispatch(resetPlansToInitialState())}/> */}

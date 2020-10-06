@@ -12,15 +12,16 @@ const styles = StyleSheet.create({
     }
 })
 
-const PlanCard = ({ planData }) => {
+const ExerciseCard = ({ exerciseData }) => {
     return (
         <View style={styles.container}>
-            <Text>{planData.name}</Text>
-            <Text>{planData.daysPerWeek} days/week</Text>
-            <Text>Created at {planData.creationDate}</Text>
+            <Text>{exerciseData.name}</Text>
+            <Text>Sets: {exerciseData.sets}</Text>
+            <Text>Reps: {exerciseData.repetitions}</Text>
+            <Text>Kgs: {exerciseData.kgs}</Text>
         </View>
         
     )
 }
 
-export default PlanCard;
+export default ExerciseCard;
