@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
 const ExercisesList = ({ exercises }) => {
     return (
         <View style={styles.container}>
-            <Text>This is the exercise list component</Text>
             <FlatList
                 data={exercises}
                 keyExtractor={x => String(x.name)}

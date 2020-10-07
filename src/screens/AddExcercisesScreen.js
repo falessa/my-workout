@@ -10,13 +10,16 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
     },
     exercisesListContainer: {
+        flex: 12,
         alignItems: 'center',
-        justifyContent: 'center',
-        padding: 90
+        justifyContent: 'flex-start',
+        backgroundColor: '#fff',
+
+    },
+    buttonsContainer: {
+        flex: 2
     } 
 })
 
@@ -29,14 +32,6 @@ export default function App() {
     }
 
     console.log(exercises)
-
-    const renderDay1 = () => {
-        return (
-            <View>
-                <Text>Day 1</Text>
-            </View>
-        )
-    }
 
     const testData = [
             {
@@ -75,15 +70,21 @@ export default function App() {
         <View style={styles.container}>
             <KeyboardAwareScrollView>
                 <ScrollView>
-                    <FlatList 
+                    <FlatList
                         horizontal={true}
                         data={exercises}
                         keyExtractor={x => String(x.day)}
-                        renderItem={({ item }) => <Button title={'Day ' + item.day}/> }
+                        renderItem={({ item }) => <Button title={'Day ' + item.day} onPress={() => console.log('clicked day:', item.day) }/> }
                     />
                 </ScrollView>
-                <ExercisesList  style={styles.exercisesListContainer} exercises={testData}/>
             </KeyboardAwareScrollView>
+            <View style={styles.exercisesListContainer}>
+                <ExercisesList exercises={testData}/>
+            </View>
+            <View style={styles.buttonsContainer}>
+                <Button title='Add exercise' />
+                <Button title='Save plan for all days' />
+            </View>
         </View>
     )
 }
