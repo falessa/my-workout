@@ -40,6 +40,24 @@ const initialState = [
                     }
                 ],
             },
+            {
+                musclesZone: 'Cuadriceps y aductores',
+                day: 3,
+                exercises: [
+                    {
+                        name: 'Silla de cuadriceps',
+                        sets: 4,
+                        repetitions: '15',
+                        kgs: 40
+                    },
+                    {
+                        name: 'Sentadilla sumo',
+                        sets: 3,
+                        repetitions: '12',
+                        kgs: 7
+                    }
+                ],
+            }
         ],
         creationDate: '24/08/2020'
     }

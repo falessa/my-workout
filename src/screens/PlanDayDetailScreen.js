@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     },
     buttonsContainer: {
         flex: 2
-    } 
+    },
 })
 
 export default function App() {
@@ -39,38 +39,62 @@ export default function App() {
     const newTemporal = {...temporalPlan, planDetails}
     console.log(newTemporal)
 
-    const testData = [
-            {
-                name: 'Peso muerto piernas semiflexionadas',
-                sets: 4,
-                repetitions: 12,
-                kgs: 10
-            },
-            {
-                name: 'Peso muerto a 1 pierna + extension de cadera en cajon',
-                sets: 3,
-                repetitions: '12 + 15',
-                kgs: 10
-            },
-            {
-                name: 'Peso muerto piernas semiflexionadas',
-                sets: 4,
-                repetitions: 12,
-                kgs: 10
-            },
-            {
-                name: 'Peso muerto piernas semiflexionadas',
-                sets: 4,
-                repetitions: 12,
-                kgs: 10
-            },
-            {
-                name: 'Peso muerto piernas semiflexionadas',
-                sets: 4,
-                repetitions: 12,
-                kgs: 10
-            },
+    const testData2 = [
+        {
+            musclesZone: 'Femorales y gluteos',
+            day: 1,
+            exercises: [
+                {
+                    name: 'Peso muerto piernas semiflexionadas',
+                    sets: 4,
+                    repetitions: 12,
+                    kgs: 10
+                },
+                {
+                    name: 'Peso muerto a 1 pierna + extension de cadera en cajon',
+                    sets: 3,
+                    repetitions: '12 + 15',
+                    kgs: 10
+                }
+            ],
+        },
+        {
+            musclesZone: 'Tren superior',
+            day: 2,
+            exercises: [
+                {
+                    name: 'Press plano + remo con mancuernas',
+                    sets: 4,
+                    repetitions: '12 + 12',
+                    kgs: 6
+                },
+                {
+                    name: 'Apertura inclinada + remo invertido TRX',
+                    sets: 3,
+                    repetitions: '12 + 8/12',
+                    kgs: 10
+                }
+            ],
+        },
     ]
+
+    // useState!! 
+    const filterExercisesByDay = (daySelected) => {
+        const filteredExercises = testData2.filter(planDays => planDays.day === daySelected).map(planForDay => planForDay.exercises)[0]
+        return filteredExercises
+    }
+
+    const [daySelected, setDaySelected] = useState(1);
+    const [currentPlanForSelectedDay, setCurrentPlanForSelectedDay] = useState(filterExercisesByDay(1))
+
+
+    const showDayPlanForSelectedDay = (daySelected) => {
+        console.log('PLAN FOR SELECTED DAY: ', daySelected)
+        const filterExercises = filterExercisesByDay(daySelected)
+        console.log(filterExercises)
+        setDaySelected(daySelected)
+        setCurrentPlanForSelectedDay(filterExercises)
+    }
 
     return (
         <View style={styles.container}>
@@ -80,16 +104,17 @@ export default function App() {
                         horizontal={true}
                         data={planDetails}
                         keyExtractor={x => String(x.day)}
-                        renderItem={({ item }) => <Button title={'Day ' + item.day} onPress={() => console.log('clicked day:', item.day) }/> }
+                        renderItem={({ item }) => <Button title={'Day ' + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
                     />
                 </ScrollView>
             </KeyboardAwareScrollView>
+            <Text>You're seeing Day {daySelected}</Text>
             <View style={styles.exercisesListContainer}>
-                <ExercisesList exercises={testData}/>
+                <ExercisesList exercises={currentPlanForSelectedDay}/>
             </View>
             <View style={styles.buttonsContainer}>
                 <Button title='Add exercise' />
-                <Button title='Save plan for all days' />
+                <Button title='Save plan for all days'/>
             </View>
         </View>
     )
