@@ -25,13 +25,19 @@ const styles = StyleSheet.create({
 
 export default function App() {
     const temporalPlan = useSelector(store => store.temporalPlan)
-    let exercises = new Array(temporalPlan.daysPerWeek)
+    let planDetails = new Array(temporalPlan.daysPerWeek)
 
-    for (let i = 0; i < exercises.length; i++) {
-        exercises[i] = { day: i + 1 }
+    for (let i = 0; i < planDetails.length; i++) {
+        planDetails[i] = { day: i + 1 }
     }
 
-    console.log(exercises)
+    console.log(temporalPlan)
+    console.log('****')
+    console.log(planDetails)
+
+    console.log('WATCH THIS:')
+    const newTemporal = {...temporalPlan, planDetails}
+    console.log(newTemporal)
 
     const testData = [
             {
@@ -72,7 +78,7 @@ export default function App() {
                 <ScrollView>
                     <FlatList
                         horizontal={true}
-                        data={exercises}
+                        data={planDetails}
                         keyExtractor={x => String(x.day)}
                         renderItem={({ item }) => <Button title={'Day ' + item.day} onPress={() => console.log('clicked day:', item.day) }/> }
                     />
