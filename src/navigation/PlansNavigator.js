@@ -4,6 +4,7 @@ import PlansHomeScreen from '../screens/PlansHomeScreen';
 import AddPlanNameScreen from '../screens/AddPlanNameScreen';
 import AddExercisesScreen from '../screens/AddExercisesScreen'
 import PlanDetailScreen from '../screens/PlanDetailScreen'
+import AddExerciseDetailScreen from '../screens/AddExerciseDetailScreen'
 
 const Stack = createStackNavigator();
 
@@ -14,6 +15,7 @@ function PlansNavigator() {
             <Stack.Screen name='AddPlanName' component={AddPlanNameScreen} />
             <Stack.Screen name='AddExercisesScreen' component={AddExercisesScreen} />
             <Stack.Screen name='PlanDetailScreen' component={PlanDetailScreen} />
+            <Stack.Screen name='AddExerciseDetail' component={AddExerciseDetailScreen} />
         </Stack.Navigator>
     )
 }

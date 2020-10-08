@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
 })
 
-export default function App() {
+export default function App({ navigation }) {
     const temporalPlan = useSelector(store => store.temporalPlan)
     let planDetails = new Array(temporalPlan.daysPerWeek)
 
@@ -32,56 +32,52 @@ export default function App() {
         planDetails[i] = { day: i + 1 }
     }
 
-    console.log(temporalPlan)
-    console.log('****')
-    console.log(planDetails)
-
     console.log('WATCH THIS:')
     const newTemporal = {...temporalPlan, planDetails}
     console.log(newTemporal)
 
-    const testData2 = [
-        {
-            musclesZone: 'Femorales y gluteos',
-            day: 1,
-            exercises: [
-                {
-                    name: 'Peso muerto piernas semiflexionadas',
-                    sets: 4,
-                    repetitions: 12,
-                    kgs: 10
-                },
-                {
-                    name: 'Peso muerto a 1 pierna + extension de cadera en cajon',
-                    sets: 3,
-                    repetitions: '12 + 15',
-                    kgs: 10
-                }
-            ],
-        },
-        {
-            musclesZone: 'Tren superior',
-            day: 2,
-            exercises: [
-                {
-                    name: 'Press plano + remo con mancuernas',
-                    sets: 4,
-                    repetitions: '12 + 12',
-                    kgs: 6
-                },
-                {
-                    name: 'Apertura inclinada + remo invertido TRX',
-                    sets: 3,
-                    repetitions: '12 + 8/12',
-                    kgs: 10
-                }
-            ],
-        },
-    ]
+    // const testData2 = [
+    //     {
+    //         musclesZone: 'Femorales y gluteos',
+    //         day: 1,
+    //         exercises: [
+    //             {
+    //                 name: 'Peso muerto piernas semiflexionadas',
+    //                 sets: 4,
+    //                 repetitions: 12,
+    //                 kgs: 10
+    //             },
+    //             {
+    //                 name: 'Peso muerto a 1 pierna + extension de cadera en cajon',
+    //                 sets: 3,
+    //                 repetitions: '12 + 15',
+    //                 kgs: 10
+    //             }
+    //         ],
+    //     },
+    //     {
+    //         musclesZone: 'Tren superior',
+    //         day: 2,
+    //         exercises: [
+    //             {
+    //                 name: 'Press plano + remo con mancuernas',
+    //                 sets: 4,
+    //                 repetitions: '12 + 12',
+    //                 kgs: 6
+    //             },
+    //             {
+    //                 name: 'Apertura inclinada + remo invertido TRX',
+    //                 sets: 3,
+    //                 repetitions: '12 + 8/12',
+    //                 kgs: 10
+    //             }
+    //         ],
+    //     },
+    // ]
 
     // useState!! 
     const filterExercisesByDay = (daySelected) => {
-        const filteredExercises = testData2.filter(planDays => planDays.day === daySelected).map(planForDay => planForDay.exercises)[0]
+        const filteredExercises = newTemporal.planDetails.filter(planDays => planDays.day === daySelected).map(planForDay => planForDay.exercises)[0]
         return filteredExercises
     }
 
@@ -119,12 +115,12 @@ export default function App() {
                         />
                     </ScrollView>
                 </KeyboardAwareScrollView>
-            {planDetails
+            {planDetails.exercises
                 ? showPlanDetails()
                 : <NoExercises day={daySelected}/> 
             }
             <View style={styles.buttonsContainer}>
-                <Button title='Add exercise' />
+                <Button title='Add exercise' onPress={() => navigation.navigate('AddExerciseDetail')} />
                 <Button title='Save plan for all days'/>
             </View>
         </View>
