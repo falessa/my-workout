@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -12,12 +12,14 @@ const styles = StyleSheet.create({
     }
 })
 
-const PlanCard = ({ planData }) => {
+const PlanCard = ({ planData, onPress }) => {
     return (
         <View style={styles.container}>
-            <Text>{planData.name}</Text>
-            <Text>{planData.daysPerWeek} days/week</Text>
-            <Text>Created at {planData.creationDate}</Text>
+            <TouchableOpacity onPress={onPress}>
+                <Text>{planData.name}</Text>
+                <Text>{planData.daysPerWeek} days/week</Text>
+                <Text>Created at {planData.creationDate}</Text>
+            </TouchableOpacity>
         </View>
         
     )
