@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -15,7 +15,6 @@ const NoExercises = () => {
         
         <View style={styles.container}>
             <Text>No exercises added yet</Text>
-            <Button title='Add workout plan' />
         </View>
         
     )
