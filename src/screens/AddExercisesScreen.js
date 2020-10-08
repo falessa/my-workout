@@ -5,6 +5,7 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 import { createTemporalPlan } from '../redux/temporalPlan'
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import ExercisesList from '../components/ExercisesList';
+import NoExercises from '../components/NoExercises';
 
 const styles = StyleSheet.create({
     container: {
@@ -96,22 +97,32 @@ export default function App() {
         setCurrentPlanForSelectedDay(filterExercises)
     }
 
+    const showPlanDetails = () => {
+        return (
+            <>
+                <Text>You're seeing Day {daySelected}</Text>
+                <View style={styles.exercisesListContainer}>
+                    <ExercisesList exercises={currentPlanForSelectedDay}/>
+                </View>
+            </>
+        )
+    }
     return (
         <View style={styles.container}>
-            <KeyboardAwareScrollView>
-                <ScrollView>
-                    <FlatList
-                        horizontal={true}
-                        data={planDetails}
-                        keyExtractor={x => String(x.day)}
-                        renderItem={({ item }) => <Button title={'Day ' + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
-                    />
-                </ScrollView>
-            </KeyboardAwareScrollView>
-            <Text>You're seeing Day {daySelected}</Text>
-            <View style={styles.exercisesListContainer}>
-                <ExercisesList exercises={currentPlanForSelectedDay}/>
-            </View>
+                <KeyboardAwareScrollView>
+                    <ScrollView>
+                        <FlatList
+                            horizontal={true}
+                            data={planDetails}
+                            keyExtractor={x => String(x.day)}
+                            renderItem={({ item }) => <Button title={'Day ' + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
+                        />
+                    </ScrollView>
+                </KeyboardAwareScrollView>
+            {planDetails
+                ? showPlanDetails()
+                : <NoExercises day={daySelected}/> 
+            }
             <View style={styles.buttonsContainer}>
                 <Button title='Add exercise' />
                 <Button title='Save plan for all days'/>

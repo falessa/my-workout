@@ -10,11 +10,11 @@ const styles = StyleSheet.create({
     }
 })
 
-const NoExercises = () => {
+const NoExercises = ({ day }) => {
     return (
         
         <View style={styles.container}>
-            <Text>No exercises added yet</Text>
+            <Text>No exercises added yet for day {day}</Text>
         </View>
         
     )
