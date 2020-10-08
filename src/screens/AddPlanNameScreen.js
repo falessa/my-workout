@@ -26,16 +26,16 @@ export default function App({ navigation }) {
     const temporalPlan = useSelector(store => store.temporalPlan)
     console.log(temporalPlan)
 
-    const goToPlanDayDetailScreen = () => {
+    const goToAddExercisesScreen = () => {
         dispatch(createTemporalPlan({name: planName, daysPerWeek: daysPerWeek}))
-        navigation.navigate('PlanDayDetailScreen')
+        navigation.navigate('AddExercisesScreen')
     }
     
     return (
         <View style={styles.container}>
             <TextInput style={styles.input} onChangeText={planName => setName(planName)} placeholder='Enter the plan name'/>
             <TextInput style={styles.input} onChangeText={daysPerWeek => setDaysPerWeek(parseInt(daysPerWeek))} placeholder='Days per week'/>
-            <Button title='Continue to plan details'  onPress={() => goToPlanDayDetailScreen()}/>
+            <Button title='Continue to add exercises'  onPress={() => goToAddExercisesScreen()}/>
         </View>
     )
 }
