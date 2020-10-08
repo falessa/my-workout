@@ -120,7 +120,7 @@ export default function App({ navigation }) {
                 : <NoExercises day={daySelected}/> 
             }
             <View style={styles.buttonsContainer}>
-                <Button title='Add exercise' onPress={() => navigation.navigate('AddExerciseDetail')} />
+                <Button title='Add exercise' onPress={() => navigation.navigate('AddExerciseDetail', { day: daySelected})} />
                 <Button title='Save plan for all days'/>
             </View>
         </View>
