@@ -26,14 +26,10 @@ const styles = StyleSheet.create({
 
 export default function App({ navigation }) {
     const dispatch = useDispatch();
-
     const temporalPlan = useSelector(store => store.temporalPlan)
-    console.log('TEMPORAL PLAN IS: ')
-    console.log(temporalPlan)
 
     // useState!! 
     const filterExercisesByDay = (daySelected) => {
-        console.log('FILTERING EXERCISES BY DAY')
         const filteredExercises = temporalPlan.planDetails.filter(planDays => planDays.day === daySelected).map(planForDay => planForDay.exercises)[0]
         return filteredExercises
     }
@@ -43,9 +39,7 @@ export default function App({ navigation }) {
 
 
     const showDayPlanForSelectedDay = (daySelected) => {
-        console.log('PLAN FOR SELECTED DAY: ', daySelected)
         const filterExercises = filterExercisesByDay(daySelected)
-        console.log(filterExercises)
         setDaySelected(daySelected)
         setCurrentPlanForSelectedDay(filterExercises)
     }

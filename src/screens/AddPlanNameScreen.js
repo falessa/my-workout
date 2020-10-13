@@ -24,7 +24,7 @@ export default function App({ navigation }) {
     let dispatch = useDispatch();
 
     const createEmptyPlanDetails = (daysPerWeek) => {
-        // add plan details array to the temporal plan
+        // add plan details array to the temporal plan that is being created
         let planDetailsArray = new Array(daysPerWeek)
         for (let i = 0; i < planDetailsArray.length; i++) {
             planDetailsArray[i] = { day: i + 1, exercises: [] }

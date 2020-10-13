@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch} from 'react-redux'
+import { useDispatch} from 'react-redux'
 import { addExerciseToDayPlan } from '../redux/temporalPlan'
 import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
 
@@ -24,8 +24,6 @@ export default function App({ route, navigation }) {
     const [sets, setSets] = useState('')
     const [repetitions, setReps] = useState('')
     const [kgs, setKgs] = useState('')
-
-    const temporalPlan = useSelector(store => store.temporalPlan)
 
     const addExerciseToPlan = () => {
         dispatch(addExerciseToDayPlan({ name, sets, repetitions, kgs, day }))
