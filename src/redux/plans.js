@@ -2,70 +2,7 @@ import 'react-native-get-random-values';
 import { v4 as uuid } from 'uuid';
 var moment = require('moment')
 
-const initialState = [
-    { 
-        id: '1', 
-        name: 'Plan September 2020',
-        daysPerWeek:'3',
-        planDetails: [
-            {
-                musclesZone: 'Femorales y gluteos',
-                day: 1,
-                exercises: [
-                    {
-                        name: 'Peso muerto piernas semiflexionadas',
-                        sets: 4,
-                        repetitions: 12,
-                        kgs: 10
-                    },
-                    {
-                        name: 'Peso muerto a 1 pierna + extension de cadera en cajon',
-                        sets: 3,
-                        repetitions: '12 + 15',
-                        kgs: 10
-                    }
-                ],
-            },
-            {
-                musclesZone: 'Tren superior',
-                day: 2,
-                exercises: [
-                    {
-                        name: 'Press plano + remo con mancuernas',
-                        sets: 4,
-                        repetitions: '12 + 12',
-                        kgs: 6
-                    },
-                    {
-                        name: 'Apertura inclinada + remo invertido TRX',
-                        sets: 3,
-                        repetitions: '12 + 8/12',
-                        kgs: 10
-                    }
-                ],
-            },
-            {
-                musclesZone: 'Cuadriceps y aductores',
-                day: 3,
-                exercises: [
-                    {
-                        name: 'Silla de cuadriceps',
-                        sets: 4,
-                        repetitions: '15',
-                        kgs: 40
-                    },
-                    {
-                        name: 'Sentadilla sumo',
-                        sets: 3,
-                        repetitions: '12',
-                        kgs: 7
-                    }
-                ],
-            }
-        ],
-        creationDate: '24/08/2020'
-    }
-]
+const initialState = []
 
 // action constants
 const ADD_PLAN = 'ADD_PLAN'
