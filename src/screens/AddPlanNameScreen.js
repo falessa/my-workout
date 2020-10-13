@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch} from 'react-redux'
+import { useDispatch} from 'react-redux'
 import { StyleSheet, View, TextInput, Button } from 'react-native';
-import { createTemporalPlan, deletePlan } from '../redux/temporalPlan'
+import { createTemporalPlan } from '../redux/temporalPlan'
 
 const styles = StyleSheet.create({
     container: {
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         width: 190,
     }
 })
-//onPress={() => dispatch(createTemporalPlan( {name: planName, daysPerWeek: daysPerWeek}))}
+
 export default function App({ navigation }) {
     const [planName, setName] = useState('')
     const [daysPerWeek, setDaysPerWeek] = useState('')

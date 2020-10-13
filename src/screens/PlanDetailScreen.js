@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch} from 'react-redux'
+import { useSelector } from 'react-redux'
 import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { FlatList, ScrollView } from 'react-native-gesture-handler';

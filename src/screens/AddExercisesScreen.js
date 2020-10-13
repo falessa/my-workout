@@ -6,7 +6,6 @@ import { createTemporalPlan, updateTemporalPlan } from '../redux/temporalPlan'
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import ExercisesList from '../components/ExercisesList';
 import NoExercises from '../components/NoExercises';
-import { roundToNearestPixel } from 'react-native/Libraries/Utilities/PixelRatio';
 
 const styles = StyleSheet.create({
     container: {
