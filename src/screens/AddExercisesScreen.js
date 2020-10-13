@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
 })
 
-export default function App({ navigation, route }) {
+export default function App({ navigation }) {
     const dispatch = useDispatch();
 
     const temporalPlan = useSelector(store => store.temporalPlan)
@@ -74,7 +74,7 @@ export default function App({ navigation, route }) {
                         />
                     </ScrollView>
                 </KeyboardAwareScrollView>
-            {temporalPlan.planDetails.exercises || route.params?.exercises
+            {currentPlanForSelectedDay.length > 0
                 ? showPlanDetails()
                 : <NoExercises day={daySelected}/>
             }
