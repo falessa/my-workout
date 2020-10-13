@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch} from 'react-redux'
 import { StyleSheet, View, TextInput, Button } from 'react-native';
-import { createTemporalPlan } from '../redux/temporalPlan'
+import { createTemporalPlan, deletePlan } from '../redux/temporalPlan'
 
 const styles = StyleSheet.create({
     container: {
@@ -21,13 +21,20 @@ const styles = StyleSheet.create({
 export default function App({ navigation }) {
     const [planName, setName] = useState('')
     const [daysPerWeek, setDaysPerWeek] = useState('')
-
     let dispatch = useDispatch();
-    const temporalPlan = useSelector(store => store.temporalPlan)
-    console.log(temporalPlan)
+
+    const createEmptyPlanDetails = (daysPerWeek) => {
+        // add plan details array to the temporal plan
+        let planDetailsArray = new Array(daysPerWeek)
+        for (let i = 0; i < planDetailsArray.length; i++) {
+            planDetailsArray[i] = { day: i + 1, exercises: [] }
+        }
+
+        return planDetailsArray
+    }
 
     const goToAddExercisesScreen = () => {
-        dispatch(createTemporalPlan({name: planName, daysPerWeek: daysPerWeek}))
+        dispatch(createTemporalPlan({name: planName, daysPerWeek: daysPerWeek, planDetails: createEmptyPlanDetails(daysPerWeek) }))
         navigation.navigate('AddExercisesScreen')
     }
     

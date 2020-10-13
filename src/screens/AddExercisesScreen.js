@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch} from 'react-redux'
 import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { createTemporalPlan } from '../redux/temporalPlan'
+import { createTemporalPlan, updateTemporalPlan } from '../redux/temporalPlan'
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import ExercisesList from '../components/ExercisesList';
 import NoExercises from '../components/NoExercises';
@@ -25,16 +25,24 @@ const styles = StyleSheet.create({
 })
 
 export default function App({ navigation }) {
+    const dispatch = useDispatch();
+
     const temporalPlan = useSelector(store => store.temporalPlan)
-    let planDetails = new Array(temporalPlan.daysPerWeek)
+    console.log('TEMPORAL PLAN IS: ')
+    console.log(temporalPlan)
+    // let planDetails = new Array(temporalPlan.daysPerWeek)
 
-    for (let i = 0; i < planDetails.length; i++) {
-        planDetails[i] = { day: i + 1 }
-    }
+    // for (let i = 0; i < planDetails.length; i++) {
+    //     planDetails[i] = { day: i + 1, exercises: [] }
+    // }
 
-    console.log('WATCH THIS:')
-    const newTemporal = {...temporalPlan, planDetails}
-    console.log(newTemporal)
+    // console.log('WATCH THIS:')
+    // const newTemporal = {...temporalPlan, planDetails}
+    // console.log(newTemporal)
+
+    // dispatch(updateTemporalPlan(newTemporal))
+    // console.log(useSelector(store => store.temporalPlan))
+
 
     // const testData2 = [
     //     {
@@ -77,7 +85,7 @@ export default function App({ navigation }) {
 
     // useState!! 
     const filterExercisesByDay = (daySelected) => {
-        const filteredExercises = newTemporal.planDetails.filter(planDays => planDays.day === daySelected).map(planForDay => planForDay.exercises)[0]
+        const filteredExercises = temporalPlan.planDetails.filter(planDays => planDays.day === daySelected).map(planForDay => planForDay.exercises)[0]
         return filteredExercises
     }
 
@@ -109,13 +117,13 @@ export default function App({ navigation }) {
                     <ScrollView>
                         <FlatList
                             horizontal={true}
-                            data={planDetails}
+                            data={temporalPlan.planDetails}
                             keyExtractor={x => String(x.day)}
                             renderItem={({ item }) => <Button title={'Day ' + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
                         />
                     </ScrollView>
                 </KeyboardAwareScrollView>
-            {planDetails.exercises
+            {temporalPlan.planDetails.exercises
                 ? showPlanDetails()
                 : <NoExercises day={daySelected}/> 
             }
