@@ -6,6 +6,7 @@ import { createTemporalPlan, updateTemporalPlan } from '../redux/temporalPlan'
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import ExercisesList from '../components/ExercisesList';
 import NoExercises from '../components/NoExercises';
+import { roundToNearestPixel } from 'react-native/Libraries/Utilities/PixelRatio';
 
 const styles = StyleSheet.create({
     container: {
@@ -24,67 +25,16 @@ const styles = StyleSheet.create({
     },
 })
 
-export default function App({ navigation }) {
+export default function App({ navigation, route }) {
     const dispatch = useDispatch();
 
     const temporalPlan = useSelector(store => store.temporalPlan)
     console.log('TEMPORAL PLAN IS: ')
     console.log(temporalPlan)
-    // let planDetails = new Array(temporalPlan.daysPerWeek)
-
-    // for (let i = 0; i < planDetails.length; i++) {
-    //     planDetails[i] = { day: i + 1, exercises: [] }
-    // }
-
-    // console.log('WATCH THIS:')
-    // const newTemporal = {...temporalPlan, planDetails}
-    // console.log(newTemporal)
-
-    // dispatch(updateTemporalPlan(newTemporal))
-    // console.log(useSelector(store => store.temporalPlan))
-
-
-    // const testData2 = [
-    //     {
-    //         musclesZone: 'Femorales y gluteos',
-    //         day: 1,
-    //         exercises: [
-    //             {
-    //                 name: 'Peso muerto piernas semiflexionadas',
-    //                 sets: 4,
-    //                 repetitions: 12,
-    //                 kgs: 10
-    //             },
-    //             {
-    //                 name: 'Peso muerto a 1 pierna + extension de cadera en cajon',
-    //                 sets: 3,
-    //                 repetitions: '12 + 15',
-    //                 kgs: 10
-    //             }
-    //         ],
-    //     },
-    //     {
-    //         musclesZone: 'Tren superior',
-    //         day: 2,
-    //         exercises: [
-    //             {
-    //                 name: 'Press plano + remo con mancuernas',
-    //                 sets: 4,
-    //                 repetitions: '12 + 12',
-    //                 kgs: 6
-    //             },
-    //             {
-    //                 name: 'Apertura inclinada + remo invertido TRX',
-    //                 sets: 3,
-    //                 repetitions: '12 + 8/12',
-    //                 kgs: 10
-    //             }
-    //         ],
-    //     },
-    // ]
 
     // useState!! 
     const filterExercisesByDay = (daySelected) => {
+        console.log('FILTERING EXERCISES BY DAY')
         const filteredExercises = temporalPlan.planDetails.filter(planDays => planDays.day === daySelected).map(planForDay => planForDay.exercises)[0]
         return filteredExercises
     }
@@ -111,6 +61,7 @@ export default function App({ navigation }) {
             </>
         )
     }
+
     return (
         <View style={styles.container}>
                 <KeyboardAwareScrollView>
@@ -123,12 +74,12 @@ export default function App({ navigation }) {
                         />
                     </ScrollView>
                 </KeyboardAwareScrollView>
-            {temporalPlan.planDetails.exercises
+            {temporalPlan.planDetails.exercises || route.params?.exercises
                 ? showPlanDetails()
-                : <NoExercises day={daySelected}/> 
+                : <NoExercises day={daySelected}/>
             }
             <View style={styles.buttonsContainer}>
-                <Button title='Add exercise' onPress={() => navigation.navigate('AddExerciseDetail', { day: daySelected})} />
+                <Button title='Add exercise' onPress={() => navigation.navigate('AddExerciseDetail', { day: daySelected })} />
                 <Button title='Save plan for all days'/>
             </View>
         </View>

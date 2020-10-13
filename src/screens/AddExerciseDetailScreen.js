@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     },
 })
 
-export default function App({ route }) {
+export default function App({ route, navigation }) {
     const { day } = route.params
     const dispatch = useDispatch();
 
@@ -27,6 +27,11 @@ export default function App({ route }) {
 
     const temporalPlan = useSelector(store => store.temporalPlan)
 
+    const addExerciseToPlan = () => {
+        dispatch(addExerciseToDayPlan({ name, sets, repetitions, kgs, day }))
+        navigation.navigate('AddExercisesScreen', { exercises:[{ name, sets, repetitions, kgs, day }]})
+    }
+
     return (
         <View style={styles.container}>
             <Text>Add exercise detail screen</Text>
@@ -34,7 +39,7 @@ export default function App({ route }) {
             <TextInput style={styles.input} onChangeText={sets => setSets(sets)} placeholder='Enter number of sets'/>
             <TextInput style={styles.input} onChangeText={repetitions => setReps(repetitions)} placeholder='Enter number of repetitions'/>
             <TextInput style={styles.input} onChangeText={kgs => setKgs(kgs)} placeholder='Enter kgs'/>
-            <Button title={'Add exercise to day ' + day} onPress={() => dispatch(addExerciseToDayPlan({ name, sets, repetitions, kgs, day }))}/>
+            <Button title={'Add exercise to day ' + day} onPress={() => addExerciseToPlan()}/>
         </View>
     )
 }
