@@ -1,5 +1,3 @@
-import 'react-native-get-random-values';
-import { v4 as uuid } from 'uuid';
 var moment = require('moment')
 
 const initialState = []
@@ -28,7 +26,7 @@ export default (state = initialState, action) => {
     switch(action.type) {
         case ADD_PLAN: {
             console.log('ADD PLAN')
-            const newPlan = {...action.payload, id: uuid(), creationDate: moment().format('MMMM Do YYYY, h:mm a')}
+            const newPlan = {...action.payload, creationDate: moment().format('MMMM Do YYYY, h:mm a')}
             return [newPlan].concat(state)
         }
         case DELETE_PLAN: {

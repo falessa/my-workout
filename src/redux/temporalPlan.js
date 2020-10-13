@@ -1,3 +1,6 @@
+import 'react-native-get-random-values';
+import { v4 as uuid } from 'uuid';
+
 const initialState = {}
 
 // action constants
@@ -29,7 +32,8 @@ export default (state = initialState, action) => {
     switch(action.type) {
         case CREATE_TEMPORAL_PLAN: {
             console.log('CREATE TEMPORAL PLAN')
-            return action.payload
+            const newTemporalPlan = { ...action.payload, id: uuid() }
+            return newTemporalPlan
         }
         case UPDATE_TEMPORAL_PLAN: {
             console.log('UPDATING TEMPORAL PLAN')
@@ -48,7 +52,7 @@ export default (state = initialState, action) => {
             
             for (let i = 0; i < state.planDetails.length; i++) {
                 if (state.planDetails[i].day === planDay) {
-                    state.planDetails[i].exercises.push({name, repetitions, sets, kgs})
+                    state.planDetails[i].exercises.push({name, repetitions, sets, kgs, id: uuid()})
                 }
             }
         }
