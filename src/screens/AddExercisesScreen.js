@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch} from 'react-redux'
-import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import ExercisesList from '../components/ExercisesList';
 import NoExercises from '../components/NoExercises';
+import { addPlan } from '../redux/plans'
 
 const styles = StyleSheet.create({
     container: {
@@ -60,6 +61,11 @@ export default function App({ navigation }) {
         )
     }
 
+    const savePlan = () => {
+        navigation.navigate('PlansHomeBottom', { plan: {} })
+        dispatch(addPlan(temporalPlan))
+    }
+
     return (
         <View style={styles.container}>
                 <KeyboardAwareScrollView>
@@ -78,7 +84,7 @@ export default function App({ navigation }) {
             }
             <View style={styles.buttonsContainer}>
                 <Button title='Add exercise' onPress={() => navigation.navigate('AddExerciseDetail', { day: daySelected })} />
-                <Button title='Save plan for all days'/>
+                <Button title='Save plan for all days' onPress={() => savePlan()}/>
             </View>
         </View>
     )
