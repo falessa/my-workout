@@ -1,4 +1,22 @@
 {
     "plansTitle": "This is the list of workout plans",
-    "addPlan": "Add workout plan"
+    "addPlan": "Add workout plan",
+
+    "noPlans": "Add a workout plan to start training now!",
+
+    "enterPlanName": "Enter the plan name",
+    "daysPerWeek": "Days per week you will train",
+    "continueToAddExercises": "Continue to add exercises",
+
+    "day": "Day",
+    "youAreSeeingDay": "You're seeing day",
+    "addExercise": "Add exercise",
+    "savePlanForAllDays": "Save plan for all days",
+
+    "addExerciseDetails": "Add exercise details",
+    "enterExerciseName": "Enter exercise name",
+    "enterSets": "Enter number of sets",
+    "enterRepetitions": "Enter number of repetitions",
+    "enterKgs": "Enter kgs for the exercise",
+    "addExerciseToDay": "Add exercise to day"
 }

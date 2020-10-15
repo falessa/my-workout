@@ -1,4 +1,22 @@
 {
     "plansTitle": "Esta es la lista de planes de entrenamiento",
-    "addPlan": "Agregar plan de entrenamiento"
+    "addPlan": "Agregar plan de entrenamiento",
+
+    "noPlans": "¡Agrega un plan de entrenamiento para empezar a entrenar ahora!",
+
+    "enterPlanName": "Ingresa el nombre del plan de entrenamiento",
+    "daysPerWeek": "Cantidad de dias a la semana que entrenarás",
+    "continueToAddExercises": "Continúa para agregar ejercicios",
+
+    "day": "Día",
+    "youAreSeeingDay": "Estás viendo el día",
+    "addExercise": "Agregar ejercicio",
+    "savePlanForAllDays": "Guardar plan para todos los días",
+
+    "addExerciseDetails": "Completa los detalles del ejercicio",
+    "enterExerciseName": "Ingresa el nombre del ejercicio",
+    "enterSets": "Ingresa el número de sets",
+    "enterRepetitions": "Ingresa el número de repeticiones",
+    "enterKgs": "Ingresa los kgs para el ejercicio",
+    "addExerciseToDay": "Agregar ejercicio al día"
 }
