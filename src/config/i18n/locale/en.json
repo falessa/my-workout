@@ -18,5 +18,14 @@
     "enterSets": "Enter number of sets",
     "enterRepetitions": "Enter number of repetitions",
     "enterKgs": "Enter kgs for the exercise",
-    "addExerciseToDay": "Add exercise to day"
+    "addExerciseToDay": "Add exercise to day",
+
+    "sets": "Sets",
+    "repetitions": "Reps",
+    "kgs": "Kgs",
+
+    "noExercisesAddedForDay": "No exercises added yet for day",
+
+    "daysWeek": "days/week",
+    "createdAt": "Created at"
 }
