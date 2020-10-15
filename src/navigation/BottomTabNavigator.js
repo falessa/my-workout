@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import PlansNavigator from './PlansNavigator'
-import HelpNavigator from './HelpNavigator'
+import SettingsNavigator from './SettingsNavigator'
 import { NavigationContainer } from '@react-navigation/native';
 
 const Tab = createBottomTabNavigator();
@@ -11,7 +11,7 @@ function ButtomTabNavigator() {
         <NavigationContainer>
             <Tab.Navigator>
                 <Tab.Screen name='PlansHomeNavigator' component={PlansNavigator}/>
-                <Tab.Screen name='HelpNavigator' component={HelpNavigator} />
+                <Tab.Screen name='SettingsNavigator' component={SettingsNavigator} />
             </Tab.Navigator>
         </NavigationContainer>
     )
