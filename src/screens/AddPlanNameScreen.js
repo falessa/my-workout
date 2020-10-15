@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch} from 'react-redux'
 import { StyleSheet, View, TextInput, Button } from 'react-native';
 import { createTemporalPlan } from '../redux/temporalPlan'
+import { useTranslation } from 'react-i18next';
+
 
 const styles = StyleSheet.create({
     container: {
@@ -19,6 +21,8 @@ const styles = StyleSheet.create({
 })
 
 export default function App({ navigation }) {
+    const { t } = useTranslation()
+
     const [planName, setName] = useState('')
     const [daysPerWeek, setDaysPerWeek] = useState('')
     let dispatch = useDispatch();
@@ -40,9 +44,9 @@ export default function App({ navigation }) {
     
     return (
         <View style={styles.container}>
-            <TextInput style={styles.input} onChangeText={planName => setName(planName)} placeholder='Enter the plan name'/>
-            <TextInput style={styles.input} onChangeText={daysPerWeek => setDaysPerWeek(parseInt(daysPerWeek))} placeholder='Days per week'/>
-            <Button title='Continue to add exercises'  onPress={() => goToAddExercisesScreen()}/>
+            <TextInput style={styles.input} onChangeText={planName => setName(planName)} placeholder={t('enterPlanName')}/>
+            <TextInput style={styles.input} onChangeText={daysPerWeek => setDaysPerWeek(parseInt(daysPerWeek))} placeholder={t('daysPerWeek')}/>
+            <Button title={t('continueToAddExercises')}  onPress={() => goToAddExercisesScreen()}/>
         </View>
     )
 }

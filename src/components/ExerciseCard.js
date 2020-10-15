@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
     container: {
@@ -13,12 +14,14 @@ const styles = StyleSheet.create({
 })
 
 const ExerciseCard = ({ exerciseData }) => {
+    const { t } = useTranslation()
+
     return (
         <View style={styles.container}>
             <Text>{exerciseData.name}</Text>
-            <Text>Sets: {exerciseData.sets}</Text>
-            <Text>Reps: {exerciseData.repetitions}</Text>
-            <Text>Kgs: {exerciseData.kgs}</Text>
+            <Text>{t('sets')}: {exerciseData.sets}</Text>
+            <Text>{t('repetitions')}: {exerciseData.repetitions}</Text>
+            <Text>{t('kgs')}: {exerciseData.kgs}</Text>
         </View>
         
     )

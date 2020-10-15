@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, FlatList, Button } from 'react-native';
 import PlanCard from './PlanCard';
 import PlanCardsSeparator from './PlanCardsSeparator'
+import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
     container: {
@@ -14,16 +15,18 @@ const styles = StyleSheet.create({
 })
 
 const PlansList = ({ plans, navigation }) => {
+    const { t } = useTranslation()
+
     return (
         <View style={styles.container}>
-            <Text>This is the plans list component</Text>
+            <Text>{t('plansTitle')}</Text>
             <FlatList
                 data={plans}
                 keyExtractor={x => String(x.id)}
                 renderItem={({ item }) => <PlanCard planData={item} onPress={() => navigation.navigate('PlanDetailScreen', { planId: item.id } )}/> }
                 ItemSeparatorComponent={PlanCardsSeparator}
             />
-            <Button title='Add plan' onPress={() => navigation.navigate('AddPlanName')}/>
+            <Button title={t('addPlan')} onPress={() => navigation.navigate('AddPlanName')}/>
         </View>
     )
 }
