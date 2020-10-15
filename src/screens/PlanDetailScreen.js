@@ -4,6 +4,7 @@ import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import ExercisesList from '../components/ExercisesList';
+import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
     container: {
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
 })
 
 export default function App({ route }) {
+    const { t } = useTranslation()
     const allPlans = useSelector(store => store.plans)
     const { planId } = route.params
 
@@ -52,11 +54,11 @@ export default function App({ route }) {
                         horizontal={true}
                         data={planDetails}
                         keyExtractor={x => String(x.day)}
-                        renderItem={({ item }) => <Button title={'Day ' + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
+                        renderItem={({ item }) => <Button title={t('day') + " " + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
                     />
                 </ScrollView>
             </KeyboardAwareScrollView>
-            <Text>You're seeing Day {daySelected}</Text>
+            <Text>{t('youAreSeeingDay')} {daySelected}</Text>
             <View style={styles.exercisesListContainer}>
                 <ExercisesList exercises={currentPlanForSelectedDay}/>
             </View>

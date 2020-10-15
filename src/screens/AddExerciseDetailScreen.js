@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch} from 'react-redux'
 import { addExerciseToDayPlan } from '../redux/temporalPlan'
 import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
+import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
     container: {
@@ -17,8 +18,9 @@ const styles = StyleSheet.create({
 })
 
 export default function App({ route, navigation }) {
+    const { t } = useTranslation()
     const { day } = route.params
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
 
     const [name, setExerciseName] = useState('')
     const [sets, setSets] = useState('')
@@ -32,12 +34,12 @@ export default function App({ route, navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text>Add exercise detail screen</Text>
-            <TextInput style={styles.input} onChangeText={name => setExerciseName(name)} placeholder='Enter the exercise name'/>
-            <TextInput style={styles.input} onChangeText={sets => setSets(sets)} placeholder='Enter number of sets'/>
-            <TextInput style={styles.input} onChangeText={repetitions => setReps(repetitions)} placeholder='Enter number of repetitions'/>
-            <TextInput style={styles.input} onChangeText={kgs => setKgs(kgs)} placeholder='Enter kgs'/>
-            <Button title={'Add exercise to day ' + day} onPress={() => addExerciseToPlan()}/>
+            <Text>{t('addExerciseDetails')}</Text>
+            <TextInput style={styles.input} onChangeText={name => setExerciseName(name)} placeholder={t('enterExerciseName')}/>
+            <TextInput style={styles.input} onChangeText={sets => setSets(sets)} placeholder={t('enterSets')}/>
+            <TextInput style={styles.input} onChangeText={repetitions => setReps(repetitions)} placeholder={t('enterRepetitions')}/>
+            <TextInput style={styles.input} onChangeText={kgs => setKgs(kgs)} placeholder={t('enterKgs')}/>
+            <Button title={t('addExerciseToDay') + " " + day} onPress={() => addExerciseToPlan()}/>
         </View>
     )
 }

@@ -6,6 +6,7 @@ import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import ExercisesList from '../components/ExercisesList';
 import NoExercises from '../components/NoExercises';
 import { addPlan } from '../redux/plans'
+import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
     container: {
@@ -25,7 +26,8 @@ const styles = StyleSheet.create({
 })
 
 export default function App({ navigation }) {
-    const dispatch = useDispatch();
+    const { t } = useTranslation()
+    const dispatch = useDispatch()
     const temporalPlan = useSelector(store => store.temporalPlan)
 
     // useState!! 
@@ -47,7 +49,7 @@ export default function App({ navigation }) {
     const showPlanDetails = () => {
         return (
             <>
-                <Text>You're seeing Day {daySelected}</Text>
+                <Text>{t('youAreSeeingDay')} {daySelected}</Text>
                 <View style={styles.exercisesListContainer}>
                     <ExercisesList exercises={currentPlanForSelectedDay}/>
                 </View>
@@ -68,7 +70,7 @@ export default function App({ navigation }) {
                             horizontal={true}
                             data={temporalPlan.planDetails}
                             keyExtractor={x => String(x.day)}
-                            renderItem={({ item }) => <Button title={'Day ' + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
+                            renderItem={({ item }) => <Button title={t('day') + " " + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
                         />
                     </ScrollView>
                 </KeyboardAwareScrollView>
@@ -77,8 +79,8 @@ export default function App({ navigation }) {
                 : <NoExercises day={daySelected}/>
             }
             <View style={styles.buttonsContainer}>
-                <Button title='Add exercise' onPress={() => navigation.navigate('AddExerciseDetail', { day: daySelected })} />
-                <Button title='Save plan for all days' onPress={() => savePlan()}/>
+                <Button title={t('addExercise')} onPress={() => navigation.navigate('AddExerciseDetail', { day: daySelected })} />
+                <Button title={t('savePlanForAllDays')} onPress={() => savePlan()}/>
             </View>
         </View>
     )

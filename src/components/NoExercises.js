@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
     container: {
@@ -11,10 +12,12 @@ const styles = StyleSheet.create({
 })
 
 const NoExercises = ({ day }) => {
+    const { t } = useTranslation()
+
     return (
         
         <View style={styles.container}>
-            <Text>No exercises added yet for day {day}</Text>
+            <Text>{t('noExercisesAddedForDay')} {day}</Text>
         </View>
         
     )

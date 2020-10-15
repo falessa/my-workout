@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
     container: {
@@ -13,12 +14,14 @@ const styles = StyleSheet.create({
 })
 
 const PlanCard = ({ planData, onPress }) => {
+    const { t } = useTranslation()
+
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={onPress}>
                 <Text>{planData.name}</Text>
-                <Text>{planData.daysPerWeek} days/week</Text>
-                <Text>Created at {planData.creationDate}</Text>
+                <Text>{planData.daysPerWeek} {t('daysWeek')}</Text>
+                <Text>{t('createdAt')} {planData.creationDate}</Text>
             </TouchableOpacity>
         </View>
         
