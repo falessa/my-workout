@@ -5,13 +5,13 @@ import LanguageScreen from '../screens/settings/LanguageScreen';
 
 const Stack = createStackNavigator();
 
-function PlansNavigator() {
+function SettingsNavigator() {
     return (
         <Stack.Navigator>
-            <Stack.Screen name='Settings' component={SettingsScreen} />
+            <Stack.Screen name='Settings' options={{headerTitle: "Settings !!"}} component={SettingsScreen} />
             <Stack.Screen name='LanguageScreen' component={LanguageScreen} />
         </Stack.Navigator>
     )
 }
 
-export default PlansNavigator;
+export default SettingsNavigator;
