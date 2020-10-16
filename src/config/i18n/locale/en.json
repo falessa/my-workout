@@ -27,5 +27,14 @@
     "noExercisesAddedForDay": "No exercises added yet for day",
 
     "daysWeek": "days/week",
-    "createdAt": "Created at"
+    "createdAt": "Created at",
+
+    "changeLanguage": "Change language",
+
+    "language": "Language",
+    "help": "Help",
+    "aboutUs": "About us",
+
+    "english": "English",
+    "spanish": "Spanish"
 }
