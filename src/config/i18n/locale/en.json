@@ -36,5 +36,8 @@
     "aboutUs": "About us",
 
     "english": "English",
-    "spanish": "Spanish"
+    "spanish": "Spanish",
+
+    "settingsScreenTitle": "Settings",
+    "languageScreenTitle": "Language"
 }
