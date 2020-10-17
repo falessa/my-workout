@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch} from 'react-redux'
-import { addExerciseToDayPlan } from '../redux/temporalPlan'
+import { addExerciseToDayPlan } from '../../../redux/temporalPlan'
 import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
 import { useTranslation } from 'react-i18next';
 

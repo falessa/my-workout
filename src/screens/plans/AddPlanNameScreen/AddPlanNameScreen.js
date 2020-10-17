@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch} from 'react-redux'
 import { StyleSheet, View, TextInput, Button } from 'react-native';
-import { createTemporalPlan } from '../redux/temporalPlan'
+import { createTemporalPlan } from '../../../redux/temporalPlan'
 import { useTranslation } from 'react-i18next';
 
 

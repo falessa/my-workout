@@ -3,9 +3,9 @@ import { useSelector, useDispatch} from 'react-redux'
 import { StyleSheet, View, Text, Button } from 'react-native';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
-import ExercisesList from '../components/ExercisesList';
-import NoExercises from '../components/NoExercises';
-import { addPlan } from '../redux/plans'
+import ExercisesList from '../../../components/ExercisesList';
+import NoExercises from '../../../components/NoExercises';
+import { addPlan } from '../../../redux/plans'
 import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({

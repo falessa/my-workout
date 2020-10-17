@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
-import ExercisesList from '../components/ExercisesList';
+import ExercisesList from '../../../components/ExercisesList';
 import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
