@@ -38,6 +38,11 @@
     "english": "English",
     "spanish": "Spanish",
 
+    "plansHomeScreenTitle": "Workout plans",
+    "addPlanScreenTitle": "Add workout plan",
+    "addExercisesScreenTitle": "Add exercises",
+    "planDetailScreenTitle": "Workout plan details",
+    "addExerciseDetailScreenTitle": "Exercise details",
     "settingsScreenTitle": "Settings",
     "languageScreenTitle": "Language"
 }
