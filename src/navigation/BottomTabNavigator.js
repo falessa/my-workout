@@ -11,7 +11,7 @@ function ButtomTabNavigator() {
         <NavigationContainer>
             <Tab.Navigator>
                 <Tab.Screen name='PlansHomeNavigator' component={PlansNavigator}/>
-                <Tab.Screen name='SettingsNavigator' component={SettingsNavigator} />
+                <Tab.Screen name='SettingsNavigator' component={SettingsNavigator}/>
             </Tab.Navigator>
         </NavigationContainer>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import ListMenuOptionSelectable from '../../components/ListMenuOptionSelectable';
-import Languages from '../../utils/LanguagesEnum'
+import ListMenuOptionSelectable from '../../../components/ListMenuOptionSelectable';
+import Languages from '../../../utils/LanguagesEnum'
 
 export default function App() {
     return (
