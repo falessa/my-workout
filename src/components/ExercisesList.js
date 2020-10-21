@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, FlatList, Button } from 'react-native';
-import ExerciseCard from './ExerciseCard';
+import ExerciseCard from './ExerciseCard/ExerciseCard';
 import PlanCardsSeparator from './PlanCardsSeparator'
 
 const styles = StyleSheet.create({
