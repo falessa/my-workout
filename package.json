@@ -46,6 +46,9 @@
   },
   "private": true,
   "jest": {
+    "setupFiles": [
+      "<rootDir>/src/jest/mock.js"
+    ],
     "preset": "jest-expo"
   }
 }
