@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, FlatList } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import Languages from '../utils/LanguagesEnum'
+import Languages from '../../utils/LanguagesEnum'
 import i18n from 'i18next'
 
 const styles = StyleSheet.create({
