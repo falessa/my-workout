@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, FlatList, Button } from 'react-native';
-import PlanCard from './PlanCard';
+import PlanCard from './PlanCard/PlanCard';
 import PlanCardsSeparator from './PlanCardsSeparator'
 import { useTranslation } from 'react-i18next';
 
