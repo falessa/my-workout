@@ -5,6 +5,7 @@ const initialState = {}
 
 // action constants
 const CREATE_TEMPORAL_PLAN = 'CREATE_TEMPORAL_PLAN'
+const CREATE_TEMPORAL_PLAN_WITH_ID = 'CREATE_TEMPORAL_PLAN_WITH_ID'
 const UPDATE_TEMPORAL_PLAN = 'UPDATE_TEMPORAL_PLAN'
 const DELETE_TEMPORAL_PLAN = 'DELETE_TEMPORAL_PLAN'
 const ADD_EXERCISE_TO_DAY_PLAN = 'ADD_EXERCISE_TO_DAY_PLAN'
@@ -13,6 +14,11 @@ export const createTemporalPlan = temporalPlanData => ({
     type: CREATE_TEMPORAL_PLAN,
     payload: temporalPlanData
 })
+
+export const createTemporalPlanWithId = temporalPlanData => ({
+    type: CREATE_TEMPORAL_PLAN_WITH_ID,
+        payload: temporalPlanData
+    })
 
 export const updateTemporalPlan = temporalPlanData => ({
     type: UPDATE_TEMPORAL_PLAN,
@@ -33,6 +39,12 @@ export default (state = initialState, action) => {
         case CREATE_TEMPORAL_PLAN: {
             console.log('CREATE TEMPORAL PLAN')
             const newTemporalPlan = { ...action.payload, id: uuid() }
+            return newTemporalPlan
+        }
+        case CREATE_TEMPORAL_PLAN_WITH_ID : {
+            console.log('CREATE TEMPORAL PLAN WITH ID', action.payload.id)
+            console.log(action.payload)
+            const newTemporalPlan = { ...action.payload }
             return newTemporalPlan
         }
         case UPDATE_TEMPORAL_PLAN: {

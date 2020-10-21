@@ -17,6 +17,7 @@ export default function App({ navigation }) {
         : <NoPlans onPress={() => navigation.navigate('AddPlanName')}/>
       }
 
+      <Button title="Reset store" onPress={() => dispatch(resetPlansToInitialState())}/>
       {/* <Text>Plans screen works with redux!!!</Text>
       <Button title="Add plan" onPress={() => dispatch(addPlan(
             { 
@@ -64,8 +65,7 @@ export default function App({ navigation }) {
               creationDate: '24/08/2020'
           }
         ))}
-      />
-      <Button title="Reset store" onPress={() => dispatch(resetPlansToInitialState())}/> */}
+      /> */}
 
     </View>
   );

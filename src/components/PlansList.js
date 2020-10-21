@@ -23,7 +23,7 @@ const PlansList = ({ plans, navigation }) => {
             <FlatList
                 data={plans}
                 keyExtractor={x => String(x.id)}
-                renderItem={({ item }) => <PlanCard planData={item} onPress={() => navigation.navigate('PlanDetailScreen', { planId: item.id } )}/> }
+                renderItem={({ item }) => <PlanCard planData={item} navigation={navigation}/> }
                 ItemSeparatorComponent={PlanCardsSeparator}
             />
             <Button title={t('addPlan')} onPress={() => navigation.navigate('AddPlanName')}/>

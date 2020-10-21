@@ -39,7 +39,7 @@ export default function App({ navigation }) {
 
     const goToAddExercisesScreen = () => {
         dispatch(createTemporalPlan({name: planName, daysPerWeek: daysPerWeek, planDetails: createEmptyPlanDetails(daysPerWeek) }))
-        navigation.navigate('AddExercisesScreen')
+        navigation.navigate('AddExercisesScreen', {planId: ''})
     }
     
     return (
