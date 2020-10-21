@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch} from 'react-redux'
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { addPlan, resetPlansToInitialState } from '../../redux/plans'
-import NoPlans from '../../components/NoPlans'
+import NoPlans from '../../components/NoPlans/NoPlans'
 import PlansList from '../../components/PlansList/PlansList';
 
 export default function App({ navigation }) {
