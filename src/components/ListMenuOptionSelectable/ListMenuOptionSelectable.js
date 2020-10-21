@@ -2,7 +2,8 @@ import React from 'react';
 import { StyleSheet, View, Text, FlatList } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import Settings from '../utils/SettingsEnum'
+import Languages from '../../utils/LanguagesEnum'
+import i18n from 'i18next'
 
 const styles = StyleSheet.create({
     container: {
@@ -17,28 +18,29 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 18,
+        // paddingBottom: 10,
     }
 })
 
-const ListMenuOption = ({ options, navigation }) => {
+const ListMenuOptionSelectable = ({ options }) => {
     const { t } = useTranslation()
+    
+    const changeLanguage = (language) => {
+        i18n.changeLanguage(language)
+    }
 
-    const navigateToMenuScreen = item => {
+    const selectMenuOption = item => {
         switch(item) {
-            case Settings.LANGUAGE: {
-                navigation.navigate('LanguageScreen')
+            case Languages.ENGLISH: {
+                changeLanguage('en')
                 break
             }
-            case Settings.HELP: {
-                navigation.navigate('HelpScreen')
-                break
-            }
-            case Settings.ABOUT_US: {
-                console.log('ABOUT US SCREEN NOT IMPLEMENTED YET')
+            case Languages.SPANISH: {
+                changeLanguage('es')
                 break
             }
             default: {
-                throw new Error('Setting does not exist')
+                throw new Error(`Language ${item} does not exist`)
             }
         }
     }
@@ -49,7 +51,7 @@ const ListMenuOption = ({ options, navigation }) => {
                 data={options}
                 keyExtractor={x => String(x)}
                 renderItem={({ item }) => 
-                    <TouchableOpacity style={styles.container} onPress={() => navigateToMenuScreen(item)}>
+                    <TouchableOpacity style={styles.container} onPress={() => selectMenuOption(item)}>
                         <Text style={styles.text}>{t(item)}</Text>
                     </TouchableOpacity>
                 }
@@ -58,4 +60,4 @@ const ListMenuOption = ({ options, navigation }) => {
     )
 }
 
-export default ListMenuOption;
+export default ListMenuOptionSelectable;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Settings from '../../../utils/SettingsEnum'
-import ListMenuOption from '../../../components/ListMenuOptionNavigatable';
+import ListMenuOption from '../../../components/ListMenuOptionNavigatable/ListMenuOptionNavigatable';
 
 export default function App({ navigation }) {
     return (
