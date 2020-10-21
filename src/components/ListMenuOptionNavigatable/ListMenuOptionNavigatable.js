@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, FlatList } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import Settings from '../utils/SettingsEnum'
+import Settings from '../../utils/SettingsEnum'
 
 const styles = StyleSheet.create({
     container: {
