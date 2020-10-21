@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
 import ExerciseCard from '../ExerciseCard/ExerciseCard';
-import PlanCardsSeparator from '../PlanCardsSeparator'
+import PlanCardsSeparator from '../PlanCardsSeparator/PlanCardsSeparator'
 
 const styles = StyleSheet.create({
     container: {
