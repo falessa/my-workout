@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch} from 'react-redux'
-import { StyleSheet, View, TextInput, Button } from 'react-native';
+import { StyleSheet, View, TextInput } from 'react-native';
+import MainButton from '../../../components/MainButton'
 import { createTemporalPlan } from '../../../redux/temporalPlan'
 import { useTranslation } from 'react-i18next';
 
@@ -46,7 +47,7 @@ export default function App({ navigation }) {
         <View style={styles.container}>
             <TextInput style={styles.input} onChangeText={planName => setName(planName)} placeholder={t('enterPlanName')}/>
             <TextInput style={styles.input} onChangeText={daysPerWeek => setDaysPerWeek(parseInt(daysPerWeek))} placeholder={t('daysPerWeek')}/>
-            <Button title={t('continueToAddExercises')}  onPress={() => goToAddExercisesScreen()}/>
+            <MainButton onPress={() => goToAddExercisesScreen()} text={t('continueToAddExercises')}/>
         </View>
     )
 }

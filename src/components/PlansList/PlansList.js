@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, View, Text, FlatList, Button } from 'react-native';
+import { StyleSheet, View, Text, FlatList, Button, TouchableOpacity} from 'react-native';
 import PlanCard from '../PlanCard/PlanCard';
 import PlanCardsSeparator from '../PlanCardsSeparator/PlanCardsSeparator'
+import MainButton from '../MainButton'
 import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
@@ -26,7 +27,7 @@ const PlansList = ({ plans, navigation }) => {
                 renderItem={({ item }) => <PlanCard planData={item} onPress={() => navigation.navigate('PlanDetailScreen', { planId: item.id } )}/> }
                 ItemSeparatorComponent={PlanCardsSeparator}
             />
-            <Button title={t('addPlan')} onPress={() => navigation.navigate('AddPlanName')}/>
+            <MainButton onPress={() => navigation.navigate('AddPlanName')} text={t('addPlan')}/>
         </View>
     )
 }
