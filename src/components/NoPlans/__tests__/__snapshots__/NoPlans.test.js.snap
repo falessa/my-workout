@@ -15,8 +15,6 @@ exports[`NoPlans tests Render NoPlans 1`] = `
     noPlans
   </Text>
   <View
-    accessibilityRole="button"
-    accessibilityState={Object {}}
     accessible={true}
     focusable={true}
     onClick={[Function]}
@@ -28,32 +26,26 @@ exports[`NoPlans tests Render NoPlans 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "backgroundColor": "#386fa4",
+        "borderRadius": 20,
         "opacity": 1,
+        "paddingVertical": 5,
       }
     }
   >
-    <View
+    <Text
       style={
-        Array [
-          Object {},
-        ]
+        Object {
+          "color": "white",
+          "fontSize": 18,
+          "fontWeight": "bold",
+          "margin": 10,
+          "textAlign": "center",
+        }
       }
     >
-      <Text
-        style={
-          Array [
-            Object {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "margin": 8,
-              "textAlign": "center",
-            },
-          ]
-        }
-      >
-        addPlan
-      </Text>
-    </View>
+      addPlan
+    </Text>
   </View>
 </View>
 `;
