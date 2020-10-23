@@ -18,6 +18,7 @@
     "expo-status-bar": "~1.0.2",
     "i18next": "^19.8.2",
     "i18next-browser-languagedetector": "^6.0.1",
+    "jest-svg-transformer": "^1.0.0",
     "moment": "^2.29.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -29,6 +30,7 @@
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.4",
     "react-native-screens": "~2.10.1",
+    "react-native-svg": "^12.1.0",
     "react-native-tab-view": "^2.15.1",
     "react-native-web": "~0.13.12",
     "react-redux": "^7.2.1",
@@ -47,8 +49,22 @@
   "private": true,
   "jest": {
     "setupFiles": [
-      "<rootDir>/src/jest/mock.js"
+      "<rootDir>/src/jest/__mocks__/mock.js"
     ],
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.svgx?$": "<rootDir>/src/jest/__mocks__/svg-transform.js"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx",
+      "node",
+      "svgx",
+      "svg"
+    ]
   }
 }

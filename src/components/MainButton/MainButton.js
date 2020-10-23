@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity} from 'react-native';
 
-
 const styles = StyleSheet.create({
     button: {
         backgroundColor: '#386fa4',
         paddingVertical: 5,
-        borderRadius: 20
+        borderRadius: 20,
+        margin: 15
     },
     text: {
         fontSize: 18,
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     }
 })
 
-const MainButton = ({onPress, text}) => {
+const MainButton = ({ onPress, text }) => {
     return (
         <TouchableOpacity style={styles.button} onPress={onPress}>
             <Text style={styles.text}>{text}</Text>

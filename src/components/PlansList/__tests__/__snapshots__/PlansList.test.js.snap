@@ -173,6 +173,7 @@ exports[`PlansList tests Render PlansList 1`] = `
       Object {
         "backgroundColor": "#386fa4",
         "borderRadius": 20,
+        "margin": 15,
         "opacity": 1,
         "paddingVertical": 5,
       }

@@ -1,17 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NoPlans tests Render NoPlans 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#fff",
-      "flex": 1,
-      "justifyContent": "center",
+<View>
+  <svg
+    data-filename="assets/svg/personal_training.svgx"
+  />
+  <Text
+    style={
+      Object {
+        "color": "#343a40",
+        "fontSize": 22,
+        "fontWeight": "bold",
+        "margin": 20,
+        "textAlign": "center",
+      }
     }
-  }
->
-  <Text>
+  >
+    welcome
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#495057",
+        "fontSize": 16,
+        "fontWeight": "normal",
+        "margin": 10,
+        "textAlign": "center",
+      }
+    }
+  >
     noPlans
   </Text>
   <View
@@ -28,6 +45,7 @@ exports[`NoPlans tests Render NoPlans 1`] = `
       Object {
         "backgroundColor": "#386fa4",
         "borderRadius": 20,
+        "margin": 15,
         "opacity": 1,
         "paddingVertical": 5,
       }
