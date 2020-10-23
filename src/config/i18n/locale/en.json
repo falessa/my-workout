@@ -2,7 +2,8 @@
     "plansTitle": "This is the list of workout plans",
     "addPlan": "Add workout plan",
 
-    "noPlans": "Add a workout plan to start training now!",
+    "welcome": "Welcome!",
+    "noPlans": "Add a workout plan to start training now! 💪",
 
     "enterPlanName": "Enter the plan name",
     "daysPerWeek": "Days per week you will train",

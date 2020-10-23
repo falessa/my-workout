@@ -2,7 +2,8 @@
     "plansTitle": "Esta es la lista de planes de entrenamiento",
     "addPlan": "Agregar plan de entrenamiento",
 
-    "noPlans": "¡Agrega un plan de entrenamiento para empezar a entrenar ahora!",
+    "welcome": "¡Bienvenido!",
+    "noPlans": "¡Agrega un plan de entrenamiento para empezar a entrenar ahora! 💪",
 
     "enterPlanName": "Ingresa el nombre del plan de entrenamiento",
     "daysPerWeek": "Cantidad de dias a la semana que entrenarás",
