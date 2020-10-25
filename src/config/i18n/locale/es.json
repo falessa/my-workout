@@ -5,8 +5,10 @@
     "welcome": "¡Bienvenido!",
     "noPlans": "¡Agrega un plan de entrenamiento para empezar a entrenar ahora! 💪",
 
-    "enterPlanName": "Ingresa el nombre del plan de entrenamiento",
-    "daysPerWeek": "Cantidad de dias a la semana que entrenarás",
+    "choosePlanName": "Elige un nombre para el plan de entrenamiento",
+    "enterDaysPerWeek": "Ingresa la cantidad de días a la semana que entrenarás",
+    "enterPlanNamePlaceholder": "Por ejemplo: Plan de verano",
+    "daysPerWeekPlaceholder": "Por ejemplo: 3",
     "continueToAddExercises": "Continúa para agregar ejercicios",
 
     "day": "Día",
@@ -16,16 +18,20 @@
 
     "addExerciseDetails": "Completa los detalles del ejercicio",
     "enterExerciseName": "Ingresa el nombre del ejercicio",
+    "enterExerciseNamePlaceholder": "Por ejemplo: Sentadilla",
     "enterSets": "Ingresa el número de series",
+    "enterSetsPlaceholder": "Por ejemplo: 4",
     "enterRepetitions": "Ingresa el número de repeticiones",
+    "enterRepetitionsPlaceholder": "Por ejemplo: 15",
     "enterKgs": "Ingresa los kgs para el ejercicio",
+    "enterKgsPlaceholder": "Por ejemplo: 10",
     "addExerciseToDay": "Agregar ejercicio al día",
 
     "sets": "Sets",
     "repetitions": "Repeticiones",
     "kgs": "Kgs",
 
-    "noExercisesAddedForDay": "Todavía aún no se han agregado ejercicios para el día",
+    "noExercisesAddedForDay": "Aún no se han agregado ejercicios para el día",
 
     "daysWeek": "dias/semana",
     "createdAt": "Creado el",
