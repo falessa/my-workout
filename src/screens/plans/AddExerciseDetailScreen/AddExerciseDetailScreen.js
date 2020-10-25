@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch} from 'react-redux'
 import { addExerciseToDayPlan } from '../../../redux/temporalPlan'
-import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
+import { StyleSheet, View, Text, TextInput } from 'react-native';
+import MainButton from '../../../components/MainButton'
 import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
@@ -39,7 +40,7 @@ export default function App({ route, navigation }) {
             <TextInput style={styles.input} onChangeText={sets => setSets(sets)} placeholder={t('enterSets')}/>
             <TextInput style={styles.input} onChangeText={repetitions => setReps(repetitions)} placeholder={t('enterRepetitions')}/>
             <TextInput style={styles.input} onChangeText={kgs => setKgs(kgs)} placeholder={t('enterKgs')}/>
-            <Button title={t('addExerciseToDay') + " " + day} onPress={() => addExerciseToPlan()}/>
+            <MainButton text={t('addExerciseToDay') + " " + day} onPress={() => addExerciseToPlan()}/>
         </View>
     )
 }

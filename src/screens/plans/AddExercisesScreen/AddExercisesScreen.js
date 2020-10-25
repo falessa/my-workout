@@ -5,6 +5,7 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import ExercisesList from '../../../components/ExercisesList/ExercisesList';
 import NoExercises from '../../../components/NoExercises/NoExercises';
+import MainButton from '../../../components/MainButton'
 import { addPlan } from '../../../redux/plans'
 import { useTranslation } from 'react-i18next';
 
@@ -79,8 +80,8 @@ export default function App({ navigation }) {
                 : <NoExercises day={daySelected}/>
             }
             <View style={styles.buttonsContainer}>
-                <Button title={t('addExercise')} onPress={() => navigation.navigate('AddExerciseDetail', { day: daySelected })} />
-                <Button title={t('savePlanForAllDays')} onPress={() => savePlan()}/>
+                <MainButton text={t('addExercise')} onPress={() => navigation.navigate('AddExerciseDetail', { day: daySelected })}/>
+                <MainButton text={t('savePlanForAllDays')} onPress={() => savePlan()} />
             </View>
         </View>
     )
