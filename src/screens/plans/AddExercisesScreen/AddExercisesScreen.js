@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 
     },
     buttonsContainer: {
-        flex: 2
+        flex: 5
     },
 })
 

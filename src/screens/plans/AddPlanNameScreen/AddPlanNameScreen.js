@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch} from 'react-redux'
-import { StyleSheet, View, TextInput } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import MainButton from '../../../components/MainButton'
+import TextInput from '../../../components/TextInput'
+import TextSecondary from '../../../components/Text/TextSecondary/TextSecondary'
 import { createTemporalPlan } from '../../../redux/temporalPlan'
 import { useTranslation } from 'react-i18next';
 
@@ -11,7 +13,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        justifyContent: 'center',
+        paddingTop: 100
     }, 
     input: {
         borderWidth: 1,
@@ -45,8 +47,10 @@ export default function App({ navigation }) {
     
     return (
         <View style={styles.container}>
-            <TextInput style={styles.input} onChangeText={planName => setName(planName)} placeholder={t('enterPlanName')}/>
-            <TextInput style={styles.input} onChangeText={daysPerWeek => setDaysPerWeek(parseInt(daysPerWeek))} placeholder={t('daysPerWeek')}/>
+            <TextSecondary text={t('choosePlanName') + ":"}/>
+            <TextInput onChangeText={planName => setName(planName)} placeholder={t('enterPlanNamePlaceholder')}/>
+            <TextSecondary text={t('enterDaysPerWeek') + ":"}/>
+            <TextInput onChangeText={daysPerWeek => setDaysPerWeek(parseInt(daysPerWeek))} placeholder={t('daysPerWeekPlaceholder')}/>
             <MainButton onPress={() => goToAddExercisesScreen()} text={t('continueToAddExercises')}/>
         </View>
     )
