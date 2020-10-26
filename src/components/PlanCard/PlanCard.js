@@ -10,6 +10,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#eee',
         padding: 10,
+        borderRadius: 10,
+        marginTop: 20
+    },
+    planNameTitle: {
+        fontWeight: 'bold',
+        fontSize: 18
     }
 })
 
@@ -19,7 +25,7 @@ const PlanCard = ({ planData, onPress }) => {
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={onPress}>
-                <Text>{planData.name}</Text>
+                <Text style={styles.planNameTitle}>{planData.name}</Text>
                 <Text>{planData.daysPerWeek} {t('daysWeek')}</Text>
                 <Text>{t('createdAt')} {planData.creationDate}</Text>
             </TouchableOpacity>

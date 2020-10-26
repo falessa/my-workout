@@ -20,7 +20,6 @@ const PlansList = ({ plans, navigation }) => {
 
     return (
         <View style={styles.container}>
-            <Text>{t('plansTitle')}</Text>
             <FlatList
                 data={plans}
                 keyExtractor={x => String(x.id)}
