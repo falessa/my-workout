@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
+import ExerciseDayButton from '../../../components/ExerciseDayButton'
 import ExercisesList from '../../../components/ExercisesList/ExercisesList';
 import { useTranslation } from 'react-i18next';
 
@@ -54,7 +55,7 @@ export default function App({ route }) {
                         horizontal={true}
                         data={planDetails}
                         keyExtractor={x => String(x.day)}
-                        renderItem={({ item }) => <Button title={t('day') + " " + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
+                        renderItem={({ item }) => <ExerciseDayButton text={t('day') + " " + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
                     />
                 </ScrollView>
             </KeyboardAwareScrollView>
