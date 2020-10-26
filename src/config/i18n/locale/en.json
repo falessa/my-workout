@@ -26,9 +26,9 @@
     "enterKgsPlaceholder": "e.g 10",
     "addExerciseToDay": "Add exercise to day",
 
-    "sets": "Sets",
-    "repetitions": "Reps",
-    "kgs": "Kgs",
+    "sets": "sets",
+    "repetitions": "reps",
+    "kgs": "kgs",
 
     "noExercisesAddedForDay": "No exercises added yet for day",
 
