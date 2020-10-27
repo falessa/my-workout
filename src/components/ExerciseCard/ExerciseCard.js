@@ -10,6 +10,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#eee',
         padding: 10,
+        borderRadius: 10
+    },
+    cardTitle: {
+        fontWeight: 'bold',
+        fontSize: 17
+    },
+    boldText: {
+        fontWeight: 'bold',
+        fontSize: 14
+    },
+    exerciseDataContainer: {
+        flexDirection: 'row',
+        paddingTop: 7,
+        paddingLeft: 10
     }
 })
 
@@ -18,10 +32,23 @@ const ExerciseCard = ({ exerciseData }) => {
 
     return (
         <View style={styles.container}>
-            <Text>{exerciseData.name}</Text>
-            <Text>{t('sets')}: {exerciseData.sets}</Text>
-            <Text>{t('repetitions')}: {exerciseData.repetitions}</Text>
-            <Text>{t('kgs')}: {exerciseData.kgs}</Text>
+            <Text style={styles.cardTitle}>{exerciseData.name}</Text>
+                <View style={styles.exerciseDataContainer}>
+                    <View style={styles.exerciseDataContainer}>
+                        <Text style={styles.boldText}>{exerciseData.sets}</Text>
+                        <Text> {t('sets')}</Text>
+                    </View>
+
+                    <View style={styles.exerciseDataContainer}>
+                        <Text style={styles.boldText}>{exerciseData.repetitions}</Text>
+                        <Text> {t('repetitions')}</Text>
+                    </View>
+
+                    <View style={styles.exerciseDataContainer}>
+                        <Text style={styles.boldText}>{exerciseData.kgs}</Text>
+                        <Text> {t('kgs')}</Text>
+                    </View>
+                </View>
         </View>
         
     )

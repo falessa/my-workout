@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { useDispatch} from 'react-redux'
 import { addExerciseToDayPlan } from '../../../redux/temporalPlan'
-import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+import MainButton from '../../../components/MainButton'
+import TextInput from '../../../components/TextInput'
+import TextSecondary from '../../../components/Text/TextSecondary/TextSecondary'
 import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+        alignItems: 'center',
+        paddingTop: 100
+
     },
     input: {
         borderWidth: 1,
@@ -34,12 +40,15 @@ export default function App({ route, navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text>{t('addExerciseDetails')}</Text>
-            <TextInput style={styles.input} onChangeText={name => setExerciseName(name)} placeholder={t('enterExerciseName')}/>
-            <TextInput style={styles.input} onChangeText={sets => setSets(sets)} placeholder={t('enterSets')}/>
-            <TextInput style={styles.input} onChangeText={repetitions => setReps(repetitions)} placeholder={t('enterRepetitions')}/>
-            <TextInput style={styles.input} onChangeText={kgs => setKgs(kgs)} placeholder={t('enterKgs')}/>
-            <Button title={t('addExerciseToDay') + " " + day} onPress={() => addExerciseToPlan()}/>
+            <TextSecondary text={t('enterExerciseName') + ":"}/>
+            <TextInput onChangeText={name => setExerciseName(name)} placeholder={t('enterExerciseNamePlaceholder')}/>
+            <TextSecondary text={t('enterSets') + ":"}/>
+            <TextInput onChangeText={sets => setSets(sets)} placeholder={t('enterSetsPlaceholder')}/>
+            <TextSecondary text={t('enterRepetitions') + ":"}/>
+            <TextInput onChangeText={repetitions => setReps(repetitions)} placeholder={t('enterRepetitionsPlaceholder')}/>
+            <TextSecondary text={t('enterKgs') + ":"}/>
+            <TextInput onChangeText={kgs => setKgs(kgs)} placeholder={t('enterKgsPlaceholder')}/>
+            <MainButton text={t('addExerciseToDay') + " " + day} onPress={() => addExerciseToPlan()}/>
         </View>
     )
 }

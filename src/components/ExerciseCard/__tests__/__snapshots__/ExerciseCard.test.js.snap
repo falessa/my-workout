@@ -6,29 +6,104 @@ exports[`ExerciseCard tests Render ExerciseCard 1`] = `
     Object {
       "alignItems": "center",
       "backgroundColor": "#eee",
+      "borderRadius": 10,
       "flex": 1,
       "justifyContent": "center",
       "padding": 10,
     }
   }
 >
-  <Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 17,
+        "fontWeight": "bold",
+      }
+    }
+  >
     Squats
   </Text>
-  <Text>
-    sets
-    : 
-    4
-  </Text>
-  <Text>
-    repetitions
-    : 
-    12
-  </Text>
-  <Text>
-    kgs
-    : 
-    5
-  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "paddingLeft": 10,
+        "paddingTop": 7,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingLeft": 10,
+          "paddingTop": 7,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 14,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        4
+      </Text>
+      <Text>
+         
+        sets
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingLeft": 10,
+          "paddingTop": 7,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 14,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        12
+      </Text>
+      <Text>
+         
+        repetitions
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingLeft": 10,
+          "paddingTop": 7,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 14,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        5
+      </Text>
+      <Text>
+         
+        kgs
+      </Text>
+    </View>
+  </View>
 </View>
 `;

@@ -1,28 +1,32 @@
 {
-    "plansTitle": "This is the list of workout plans",
     "addPlan": "Add workout plan",
 
-    "noPlans": "Add a workout plan to start training now!",
+    "welcome": "Welcome!",
+    "noPlans": "Add a workout plan to start training now! 💪",
 
-    "enterPlanName": "Enter the plan name",
-    "daysPerWeek": "Days per week you will train",
+    "choosePlanName": "Choose a name for the workout plan",
+    "enterDaysPerWeek": "Enter number of days per week you'll train",
+    "enterPlanNamePlaceholder": "e.g Summer plan",
+    "daysPerWeekPlaceholder": "e.g 3",
     "continueToAddExercises": "Continue to add exercises",
 
     "day": "Day",
-    "youAreSeeingDay": "You're seeing day",
     "addExercise": "Add exercise",
     "savePlanForAllDays": "Save plan for all days",
 
-    "addExerciseDetails": "Add exercise details",
     "enterExerciseName": "Enter exercise name",
+    "enterExerciseNamePlaceholder": "e.g Squat",
     "enterSets": "Enter number of sets",
+    "enterSetsPlaceholder": "e.g 4",
     "enterRepetitions": "Enter number of repetitions",
+    "enterRepetitionsPlaceholder": "e.g 15",
     "enterKgs": "Enter kgs for the exercise",
+    "enterKgsPlaceholder": "e.g 10",
     "addExerciseToDay": "Add exercise to day",
 
-    "sets": "Sets",
-    "repetitions": "Reps",
-    "kgs": "Kgs",
+    "sets": "sets",
+    "repetitions": "reps",
+    "kgs": "kgs",
 
     "noExercisesAddedForDay": "No exercises added yet for day",
 
@@ -44,5 +48,7 @@
     "planDetailScreenTitle": "Workout plan details",
     "addExerciseDetailScreenTitle": "Exercise details",
     "settingsScreenTitle": "Settings",
-    "languageScreenTitle": "Language"
+    "languageScreenTitle": "Language",
+    "plansBottomTabTitle": "Plans",
+    "settingsBottomTabTitle": "Settings"
 }

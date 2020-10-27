@@ -6,8 +6,10 @@ exports[`PlanCard tests Render PlanCard 1`] = `
     Object {
       "alignItems": "center",
       "backgroundColor": "#eee",
+      "borderRadius": 10,
       "flex": 1,
       "justifyContent": "center",
+      "marginTop": 20,
       "padding": 10,
     }
   }
@@ -28,7 +30,14 @@ exports[`PlanCard tests Render PlanCard 1`] = `
       }
     }
   >
-    <Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
       test plan
     </Text>
     <Text>

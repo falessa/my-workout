@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux'
 import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
+import ExerciseDayButton from '../../../components/ExerciseDayButton'
 import ExercisesList from '../../../components/ExercisesList/ExercisesList';
+import NoExercises from '../../../components/NoExercises/NoExercises'
 import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
@@ -54,13 +56,15 @@ export default function App({ route }) {
                         horizontal={true}
                         data={planDetails}
                         keyExtractor={x => String(x.day)}
-                        renderItem={({ item }) => <Button title={t('day') + " " + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
+                        renderItem={({ item }) => <ExerciseDayButton text={t('day') + " " + item.day} onPress={() => showDayPlanForSelectedDay(item.day)} selected={daySelected === item.day}/> }
                     />
                 </ScrollView>
             </KeyboardAwareScrollView>
-            <Text>{t('youAreSeeingDay')} {daySelected}</Text>
             <View style={styles.exercisesListContainer}>
-                <ExercisesList exercises={currentPlanForSelectedDay}/>
+                {currentPlanForSelectedDay.length > 0
+                    ? <ExercisesList exercises={currentPlanForSelectedDay} />
+                    : <NoExercises day={daySelected}/>
+                }
             </View>
         </View>
     )
