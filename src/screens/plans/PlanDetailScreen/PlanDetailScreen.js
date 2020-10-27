@@ -59,7 +59,6 @@ export default function App({ route }) {
                     />
                 </ScrollView>
             </KeyboardAwareScrollView>
-            <Text>{t('youAreSeeingDay')} {daySelected}</Text>
             <View style={styles.exercisesListContainer}>
                 <ExercisesList exercises={currentPlanForSelectedDay}/>
             </View>

@@ -51,7 +51,6 @@ export default function App({ navigation }) {
     const showPlanDetails = () => {
         return (
             <>
-                <Text>{t('youAreSeeingDay')} {daySelected}</Text>
                 <View style={styles.exercisesListContainer}>
                     <ExercisesList exercises={currentPlanForSelectedDay}/>
                 </View>
