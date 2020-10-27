@@ -43,11 +43,11 @@ export default function App({ route, navigation }) {
             <TextSecondary text={t('enterExerciseName') + ":"}/>
             <TextInput onChangeText={name => setExerciseName(name)} placeholder={t('enterExerciseNamePlaceholder')}/>
             <TextSecondary text={t('enterSets') + ":"}/>
-            <TextInput onChangeText={sets => setSets(sets)} placeholder={t('enterSetsPlaceholder')}/>
+            <TextInput keyboardType='numeric' onChangeText={sets => setSets(sets)} placeholder={t('enterSetsPlaceholder')}/>
             <TextSecondary text={t('enterRepetitions') + ":"}/>
-            <TextInput onChangeText={repetitions => setReps(repetitions)} placeholder={t('enterRepetitionsPlaceholder')}/>
+            <TextInput keyboardType='numeric' onChangeText={repetitions => setReps(repetitions)} placeholder={t('enterRepetitionsPlaceholder')}/>
             <TextSecondary text={t('enterKgs') + ":"}/>
-            <TextInput onChangeText={kgs => setKgs(kgs)} placeholder={t('enterKgsPlaceholder')}/>
+            <TextInput keyboardType='numeric' onChangeText={kgs => setKgs(kgs)} placeholder={t('enterKgsPlaceholder')}/>
             <MainButton text={t('addExerciseToDay') + " " + day} onPress={() => addExerciseToPlan()}/>
         </View>
     )

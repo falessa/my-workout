@@ -13,9 +13,9 @@ const styles = StyleSheet.create({
       },
 })
 
-const TextInputCustom = ({ onChangeText, placeholder='' }) => {
+const TextInputCustom = ({ keyboardType, onChangeText, placeholder='' }) => {
     return ( 
-        <TextInput style={styles.input} onChangeText={onChangeText} placeholder={placeholder}/>    
+        <TextInput keyboardType={keyboardType} style={styles.input} onChangeText={onChangeText} placeholder={placeholder}/>    
     )
 }
 
