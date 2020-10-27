@@ -50,7 +50,7 @@ export default function App({ navigation }) {
             <TextSecondary text={t('choosePlanName') + ":"}/>
             <TextInput onChangeText={planName => setName(planName)} placeholder={t('enterPlanNamePlaceholder')}/>
             <TextSecondary text={t('enterDaysPerWeek') + ":"}/>
-            <TextInput onChangeText={daysPerWeek => setDaysPerWeek(parseInt(daysPerWeek))} placeholder={t('daysPerWeekPlaceholder')}/>
+            <TextInput keyboardType='numeric' onChangeText={daysPerWeek => setDaysPerWeek(parseInt(daysPerWeek))} placeholder={t('daysPerWeekPlaceholder')}/>
             <MainButton onPress={() => goToAddExercisesScreen()} text={t('continueToAddExercises')}/>
         </View>
     )

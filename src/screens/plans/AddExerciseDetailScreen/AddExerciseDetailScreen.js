@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch} from 'react-redux'
 import { addExerciseToDayPlan } from '../../../redux/temporalPlan'
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { ScrollView } from 'react-native-gesture-handler';
 import MainButton from '../../../components/MainButton'
 import TextInput from '../../../components/TextInput'
 import TextSecondary from '../../../components/Text/TextSecondary/TextSecondary'
@@ -12,15 +14,9 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        paddingTop: 100
-
-    },
-    input: {
-        borderWidth: 1,
-        borderColor: '#eee',
-        height: 30,
-        width: 190,
-    },
+        paddingTop: 100,
+        paddingBottom: '50%'
+    }
 })
 
 export default function App({ route, navigation }) {
@@ -39,16 +35,20 @@ export default function App({ route, navigation }) {
     }
 
     return (
-        <View style={styles.container}>
-            <TextSecondary text={t('enterExerciseName') + ":"}/>
-            <TextInput onChangeText={name => setExerciseName(name)} placeholder={t('enterExerciseNamePlaceholder')}/>
-            <TextSecondary text={t('enterSets') + ":"}/>
-            <TextInput onChangeText={sets => setSets(sets)} placeholder={t('enterSetsPlaceholder')}/>
-            <TextSecondary text={t('enterRepetitions') + ":"}/>
-            <TextInput onChangeText={repetitions => setReps(repetitions)} placeholder={t('enterRepetitionsPlaceholder')}/>
-            <TextSecondary text={t('enterKgs') + ":"}/>
-            <TextInput onChangeText={kgs => setKgs(kgs)} placeholder={t('enterKgsPlaceholder')}/>
-            <MainButton text={t('addExerciseToDay') + " " + day} onPress={() => addExerciseToPlan()}/>
-        </View>
+        <KeyboardAwareScrollView>
+            <ScrollView>
+                <View style={styles.container}>
+                    <TextSecondary text={t('enterExerciseName') + ":"}/>
+                    <TextInput onChangeText={name => setExerciseName(name)} placeholder={t('enterExerciseNamePlaceholder')}/>
+                    <TextSecondary text={t('enterSets') + ":"}/>
+                    <TextInput keyboardType='number-pad' onChangeText={sets => setSets(sets)} placeholder={t('enterSetsPlaceholder')}/>
+                    <TextSecondary text={t('enterRepetitions') + ":"}/>
+                    <TextInput keyboardType='numeric' onChangeText={repetitions => setReps(repetitions)} placeholder={t('enterRepetitionsPlaceholder')}/>
+                    <TextSecondary text={t('enterKgs') + ":"}/>
+                    <TextInput keyboardType='numeric' onChangeText={kgs => setKgs(kgs)} placeholder={t('enterKgsPlaceholder')}/>
+                    <MainButton text={t('addExerciseToDay') + " " + day} onPress={() => addExerciseToPlan()}/>
+                </View>
+            </ScrollView>
+        </KeyboardAwareScrollView>
     )
 }
