@@ -5,6 +5,7 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import ExerciseDayButton from '../../../components/ExerciseDayButton'
 import ExercisesList from '../../../components/ExercisesList/ExercisesList';
+import NoExercises from '../../../components/NoExercises/NoExercises'
 import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
@@ -60,7 +61,10 @@ export default function App({ route }) {
                 </ScrollView>
             </KeyboardAwareScrollView>
             <View style={styles.exercisesListContainer}>
-                <ExercisesList exercises={currentPlanForSelectedDay}/>
+                {currentPlanForSelectedDay.length > 0
+                    ? <ExercisesList exercises={currentPlanForSelectedDay} />
+                    : <NoExercises day={daySelected}/>
+                }
             </View>
         </View>
     )
