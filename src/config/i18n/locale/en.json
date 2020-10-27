@@ -49,5 +49,7 @@
     "planDetailScreenTitle": "Workout plan details",
     "addExerciseDetailScreenTitle": "Exercise details",
     "settingsScreenTitle": "Settings",
-    "languageScreenTitle": "Language"
+    "languageScreenTitle": "Language",
+    "plansBottomTabTitle": "Plans",
+    "settingsBottomTabTitle": "Settings"
 }

@@ -49,5 +49,7 @@
     "planDetailScreenTitle": "Detalles del plan de entrenamiento",
     "addExerciseDetailScreenTitle": "Detalles del ejericio",
     "settingsScreenTitle": "Configuración",
-    "languageScreenTitle": "Idioma"
+    "languageScreenTitle": "Idioma",
+    "plansBottomTabTitle": "Planes",
+    "settingsBottomTabTitle": "Configuración"
 }
