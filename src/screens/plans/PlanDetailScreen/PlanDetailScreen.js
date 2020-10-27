@@ -55,7 +55,7 @@ export default function App({ route }) {
                         horizontal={true}
                         data={planDetails}
                         keyExtractor={x => String(x.day)}
-                        renderItem={({ item }) => <ExerciseDayButton text={t('day') + " " + item.day} onPress={() => showDayPlanForSelectedDay(item.day) }/> }
+                        renderItem={({ item }) => <ExerciseDayButton text={t('day') + " " + item.day} onPress={() => showDayPlanForSelectedDay(item.day)} selected={daySelected === item.day}/> }
                     />
                 </ScrollView>
             </KeyboardAwareScrollView>
