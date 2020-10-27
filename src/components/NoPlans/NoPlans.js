@@ -20,7 +20,9 @@ const NoPlans = ({ onPress }) => {
 
     return (
         <View>
-            <WorkoutImage width={320} height={250}/>
+            <View style={{ alignItems: 'center' }}>
+                <WorkoutImage width={320} height={250}/>
+            </View>
             <TextPrimary text={t('welcome')}/>
             <TextSecondary text={t('noPlans')} />
             <MainButton onPress={onPress} text={t('addPlan')}/>

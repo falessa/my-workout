@@ -2,9 +2,17 @@
 
 exports[`NoPlans tests Render NoPlans 1`] = `
 <View>
-  <svg
-    data-filename="assets/svg/personal_training.svgx"
-  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <svg
+      data-filename="assets/svg/personal_training.svgx"
+    />
+  </View>
   <Text
     style={
       Object {
