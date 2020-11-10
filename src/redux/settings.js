@@ -11,10 +11,6 @@ export const setLanguage = plan => ({
 export default (state = initialState, action) => {
     switch(action.type) {
         case SET_LANGUAGE: {
-            // console.log('ACTION')
-            // console.log(action)
-            // console.log('STATE')
-            // console.log(state)
             return { language: action.payload }
         }
         default: {
