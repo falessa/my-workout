@@ -1,7 +1,10 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { setLanguage } from '../../redux/settings'
 import { StyleSheet, View, Text, FlatList } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Ionicons } from '@expo/vector-icons';
 import Languages from '../../utils/LanguagesEnum'
 import i18n from 'i18next'
 
@@ -18,25 +21,37 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 18,
-        // paddingBottom: 10,
+        // padding: 10
+    },
+    optionSelected: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        paddingRight: '75%',
+        // color: '#386fa4' // when applying the color, the colored text is not displayed on android devices
     }
 })
 
 const ListMenuOptionSelectable = ({ options }) => {
+    const dispatch = useDispatch();
+    const settings = useSelector(store => store.settings)
+    const languageStored = settings.language
+
     const { t } = useTranslation()
-    
+
     const changeLanguage = (language) => {
         i18n.changeLanguage(language)
     }
 
     const selectMenuOption = item => {
-        switch(item) {
+        switch (item) {
             case Languages.ENGLISH: {
                 changeLanguage('en')
+                dispatch(setLanguage(Languages.ENGLISH))
                 break
             }
             case Languages.SPANISH: {
                 changeLanguage('es')
+                dispatch(setLanguage(Languages.SPANISH))
                 break
             }
             default: {
@@ -50,9 +65,15 @@ const ListMenuOptionSelectable = ({ options }) => {
             <FlatList
                 data={options}
                 keyExtractor={x => String(x)}
-                renderItem={({ item }) => 
+                renderItem={({ item }) =>
                     <TouchableOpacity style={styles.container} onPress={() => selectMenuOption(item)}>
-                        <Text style={styles.text}>{t(item)}</Text>
+                        <View style={{ flexDirection: 'row' }}>
+                            <Text style={languageStored === item ? styles.optionSelected : styles.text}>{t(item)}</Text>
+                            {languageStored === item
+                                ? <Ionicons name='md-checkmark' size={22} color={'#386fa4'} />
+                                : <></>
+                            }
+                        </View>
                     </TouchableOpacity>
                 }
             />

@@ -4,6 +4,8 @@ import { initReactI18next } from 'react-i18next'
 import enTranslation from './locale/en.json'
 import esTranslation from './locale/es.json'
 
+// TODO: read language from settings storage before app startup
+
 i18n
     .use(languageDetector)
     .use(initReactI18next)
