@@ -23,6 +23,7 @@
     "enterKgs": "Ingresa los kgs para el ejercicio",
     "enterKgsPlaceholder": "Por ejemplo: 10",
     "addExerciseToDay": "Agregar ejercicio al día",
+    "enterSetDetails": "Sets",
 
     "sets": "sets",
     "repetitions": "repeticiones",
