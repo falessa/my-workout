@@ -46,9 +46,9 @@ const SetDetail = ({ setDetail, onTrashPress, onChangeText }) => {
     const renderSetDetailInfo = (setDetail) => {
         return (
             <View style={styles.setDetailInfo}>
-                <TextSecondary text={setDetail.sets + " sets"}/>
-                <TextSecondary text={setDetail.repetitions + " reps"} style={styles.textInput}/>
-                <TextSecondary text={setDetail.kgs + " kgs"} style={styles.textInput}/>
+                <TextSecondary text={setDetail.sets + " " + t('sets')}/>
+                <TextSecondary text={setDetail.repetitions + " " + t('repetitions')} style={styles.textInput}/>
+                <TextSecondary text={setDetail.kgs + " " + t('kgs')} style={styles.textInput}/>
                 <Ionicons name="md-trash" size={26} color="black" style={{padding: 7}} onPress={()=> { console.log("delete set detail") } }/>
             </View>
         )
