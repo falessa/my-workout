@@ -82,84 +82,38 @@ exports[`ExercisesList tests Render ExercisesList 1`] = `
           <View
             style={
               Object {
+                "alignContent": "center",
                 "flexDirection": "row",
+                "justifyContent": "center",
                 "paddingLeft": 10,
-                "paddingTop": 7,
+                "paddingRight": 10,
+                "paddingTop": 5,
               }
             }
           >
             <View
-              style={
-                Object {
-                  "flexDirection": "row",
-                  "paddingLeft": 10,
-                  "paddingTop": 7,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 14,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                4
-              </Text>
-              <Text>
-                 
-                sets
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "flexDirection": "row",
-                  "paddingLeft": 10,
-                  "paddingTop": 7,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 14,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                12
-              </Text>
-              <Text>
-                 
-                repetitions
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "flexDirection": "row",
-                  "paddingLeft": 10,
-                  "paddingTop": 7,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 14,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                5
-              </Text>
-              <Text>
-                 
-                kgs
-              </Text>
-            </View>
+              disableVirtualization={false}
+              getItem={[Function]}
+              getItemCount={[Function]}
+              horizontal={false}
+              initialNumToRender={10}
+              keyExtractor={[Function]}
+              maxToRenderPerBatch={10}
+              onContentSizeChange={[Function]}
+              onEndReachedThreshold={2}
+              onLayout={[Function]}
+              onMomentumScrollEnd={[Function]}
+              onScroll={[Function]}
+              onScrollBeginDrag={[Function]}
+              onScrollEndDrag={[Function]}
+              removeClippedSubviews={false}
+              renderItem={[Function]}
+              scrollEventThrottle={50}
+              stickyHeaderIndices={Array []}
+              updateCellsBatchingPeriod={50}
+              viewabilityConfigCallbackPairs={Array []}
+              windowSize={21}
+            />
           </View>
         </View>
         <View
@@ -199,84 +153,38 @@ exports[`ExercisesList tests Render ExercisesList 1`] = `
           <View
             style={
               Object {
+                "alignContent": "center",
                 "flexDirection": "row",
+                "justifyContent": "center",
                 "paddingLeft": 10,
-                "paddingTop": 7,
+                "paddingRight": 10,
+                "paddingTop": 5,
               }
             }
           >
             <View
-              style={
-                Object {
-                  "flexDirection": "row",
-                  "paddingLeft": 10,
-                  "paddingTop": 7,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 14,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                3
-              </Text>
-              <Text>
-                 
-                sets
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "flexDirection": "row",
-                  "paddingLeft": 10,
-                  "paddingTop": 7,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 14,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                15
-              </Text>
-              <Text>
-                 
-                repetitions
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "flexDirection": "row",
-                  "paddingLeft": 10,
-                  "paddingTop": 7,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "fontSize": 14,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                2
-              </Text>
-              <Text>
-                 
-                kgs
-              </Text>
-            </View>
+              disableVirtualization={false}
+              getItem={[Function]}
+              getItemCount={[Function]}
+              horizontal={false}
+              initialNumToRender={10}
+              keyExtractor={[Function]}
+              maxToRenderPerBatch={10}
+              onContentSizeChange={[Function]}
+              onEndReachedThreshold={2}
+              onLayout={[Function]}
+              onMomentumScrollEnd={[Function]}
+              onScroll={[Function]}
+              onScrollBeginDrag={[Function]}
+              onScrollEndDrag={[Function]}
+              removeClippedSubviews={false}
+              renderItem={[Function]}
+              scrollEventThrottle={50}
+              stickyHeaderIndices={Array []}
+              updateCellsBatchingPeriod={50}
+              viewabilityConfigCallbackPairs={Array []}
+              windowSize={21}
+            />
           </View>
         </View>
       </View>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, FlatList } from 'react-native';
 import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
@@ -22,8 +22,11 @@ const styles = StyleSheet.create({
     },
     exerciseDataContainer: {
         flexDirection: 'row',
-        paddingTop: 7,
-        paddingLeft: 10
+        paddingTop: 5,
+        paddingLeft: 10,
+        paddingRight: 10,
+        justifyContent: 'center',
+        alignContent: 'center'
     }
 })
 
@@ -34,20 +37,27 @@ const ExerciseCard = ({ exerciseData }) => {
         <View style={styles.container}>
             <Text style={styles.cardTitle}>{exerciseData.name}</Text>
                 <View style={styles.exerciseDataContainer}>
-                    <View style={styles.exerciseDataContainer}>
-                        <Text style={styles.boldText}>{exerciseData.sets}</Text>
-                        <Text> {t('sets')}</Text>
-                    </View>
+                    <FlatList data={exerciseData.setDetails}
+                        keyExtractor={item => String(item.id)}
+                        renderItem={({ item }) =>
+                            <View style={styles.exerciseDataContainer}>
+                                <View style={styles.exerciseDataContainer}>
+                                    <Text style={styles.boldText}>{item.sets}</Text>
+                                    <Text> {t('sets')}</Text>
+                                </View>
 
-                    <View style={styles.exerciseDataContainer}>
-                        <Text style={styles.boldText}>{exerciseData.repetitions}</Text>
-                        <Text> {t('repetitions')}</Text>
-                    </View>
+                                <View style={styles.exerciseDataContainer}>
+                                    <Text style={styles.boldText}>{item.repetitions}</Text>
+                                    <Text> {t('repetitions')}</Text>
+                                </View>
 
-                    <View style={styles.exerciseDataContainer}>
-                        <Text style={styles.boldText}>{exerciseData.kgs}</Text>
-                        <Text> {t('kgs')}</Text>
-                    </View>
+                                <View style={styles.exerciseDataContainer}>
+                                    <Text style={styles.boldText}>{item.kgs}</Text>
+                                    <Text> {t('kgs')}</Text>
+                                </View>
+                            </View>
+                        } />
+
                 </View>
         </View>
         
