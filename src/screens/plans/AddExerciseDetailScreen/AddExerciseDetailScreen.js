@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { addExerciseToDayPlan } from '../../../redux/temporalPlan'
 import { StyleSheet, View, FlatList } from 'react-native';
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import MainButton from '../../../components/MainButton'
 import TextInput from '../../../components/TextInput'
-import SetDetail from '../../../components/SetDetail'
 import TextSecondary from '../../../components/Text/TextSecondary/TextSecondary'
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
@@ -49,12 +46,11 @@ export default function App({ route, navigation }) {
     const [kgs, setKgs] = useState('')
 
     const addExerciseToPlan = () => {
-        dispatch(addExerciseToDayPlan({ name, sets, repetitions, kgs, day }))
+        dispatch(addExerciseToDayPlan({ name, setDetails, day }))
         navigation.navigate('AddExercisesScreen', { exercises:[{ name, sets, repetitions, kgs, day }]})
     }
 
     const renderSetDetailComponent = () => {
-        console.log(temporalPlan);
         setShowDetailComp(true);
     }
 
@@ -92,34 +88,30 @@ export default function App({ route, navigation }) {
     }
 
     return (
-        // <KeyboardAwareScrollView>
-        //     <ScrollView>
-                <View style={styles.container}>
-                    <TextSecondary text={t('enterExerciseName') + ":"}/>
-                    <TextInput onChangeText={name => setExerciseName(name)} placeholder={t('enterExerciseNamePlaceholder')}/>
+        <View style={styles.container}>
+            <TextSecondary text={t('enterExerciseName') + ":"}/>
+            <TextInput onChangeText={name => setExerciseName(name)} placeholder={t('enterExerciseNamePlaceholder')}/>
 
-                    <View style={{ flexDirection: 'row' }}>
-                        <TextSecondary text={t('enterSetDetails')}/>
-                        <Ionicons name="md-add-circle-outline" size={26} color="black" style={{padding: 7}} onPress={()=> { renderSetDetailComponent() } }/>
-                    </View>
+            <View style={{ flexDirection: 'row' }}>
+                <TextSecondary text={t('enterSetDetails')}/>
+                <Ionicons name="md-add-circle-outline" size={26} color="black" style={{padding: 7}} onPress={()=> { renderSetDetailComponent() } }/>
+            </View>
 
-                    { showSetDetailComp &&
-                        <View style={styles.setDetailEmpty}>
-                            <TextInput keyboardType='number-pad' placeholder={t('sets')} onChangeText={sets => setSets(sets)}/>
-                            <TextInput keyboardType='numeric' placeholder={t('repetitions')} onChangeText={repetitions => setReps(repetitions)}/>
-                            <TextInput keyboardType='numeric' placeholder={t('kgs')} onChangeText={kgs => setKgs(kgs)} />
-                            <Ionicons name="md-checkmark" size={26} color="black" style={{padding: 7}} onPress={confirmSetDetail}/>
-                            <Ionicons name="md-trash" size={26} color="black" style={{padding: 7}} onPress={hideSetDetailComponent}/>
-                        </View>
-                    }
-
-                    { setDetails.length > 0 &&
-                            renderConfirmedSetDetails(setDetails)
-                    }
-
-                    <MainButton text={t('addExerciseToDay') + " " + day} onPress={() => addExerciseToPlan()}/>
+            { showSetDetailComp &&
+                <View style={styles.setDetailEmpty}>
+                    <TextInput keyboardType='number-pad' placeholder={t('sets')} onChangeText={sets => setSets(sets)}/>
+                    <TextInput keyboardType='numeric' placeholder={t('repetitions')} onChangeText={repetitions => setReps(repetitions)}/>
+                    <TextInput keyboardType='numeric' placeholder={t('kgs')} onChangeText={kgs => setKgs(kgs)} />
+                    <Ionicons name="md-checkmark" size={26} color="black" style={{padding: 7}} onPress={confirmSetDetail}/>
+                    <Ionicons name="md-trash" size={26} color="black" style={{padding: 7}} onPress={hideSetDetailComponent}/>
                 </View>
-        //     </ScrollView>
-        // </KeyboardAwareScrollView>
+            }
+
+            { setDetails.length > 0 &&
+                    renderConfirmedSetDetails(setDetails)
+            }
+
+            <MainButton text={t('addExerciseToDay') + " " + day} onPress={() => addExerciseToPlan()}/>
+        </View>
     )
 }
