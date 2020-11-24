@@ -1,7 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, FlatList } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { FlatList } from 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({
     container: {
