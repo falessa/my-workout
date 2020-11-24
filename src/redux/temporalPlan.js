@@ -46,13 +46,11 @@ export default (state = initialState, action) => {
         case ADD_EXERCISE_TO_DAY_PLAN: {
             const planDay = action.payload.day
             const name = action.payload.name
-            const repetitions = action.payload.repetitions
-            const sets = action.payload.sets
-            const kgs = action.payload.kgs
+            const setDetails = action.payload.setDetails
             
             for (let i = 0; i < state.planDetails.length; i++) {
                 if (state.planDetails[i].day === planDay) {
-                    state.planDetails[i].exercises.push({name, repetitions, sets, kgs, id: uuid()})
+                    state.planDetails[i].exercises.push({name, setDetails})
                 }
             }
         }
