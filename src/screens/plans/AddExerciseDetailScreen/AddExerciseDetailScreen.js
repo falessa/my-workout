@@ -60,7 +60,7 @@ export default function App({ route, navigation }) {
 
     const confirmSetDetail = () => {
         setDetails.push({ id: uuid(), sets, repetitions, kgs })
-        setShowDetailComp(false);
+        hideSetDetailComponent();
     }
 
     const deleteSetDetail = (itemId) => {
