@@ -34,7 +34,7 @@ const ListMenuOption = ({ options, navigation }) => {
                 break
             }
             case Settings.ABOUT_US: {
-                console.log('ABOUT US SCREEN NOT IMPLEMENTED YET')
+                navigation.navigate('AboutUsScreen')
                 break
             }
             default: {

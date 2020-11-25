@@ -1,10 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { useTranslation } from 'react-i18next';
 
 export default function App() {
+  const { t } = useTranslation()
+
   return (
     <View style={styles.container}>
-      <Text>Help screen!</Text>
+      <Text>{t('aboutUsScreenOnProgress')}</Text>
     </View>
   );
 }
