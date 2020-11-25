@@ -51,5 +51,10 @@
     "settingsScreenTitle": "Settings",
     "languageScreenTitle": "Language",
     "plansBottomTabTitle": "Plans",
-    "settingsBottomTabTitle": "Settings"
+    "settingsBottomTabTitle": "Settings",
+    "helpScreenTitle": "Help",
+    "aboutUsScreenTitle": "About us",
+
+    "helpScreenOnProgress": "Help screen is on progress",
+    "aboutUsScreenOnProgress": "About Us screen is on progress"
 }

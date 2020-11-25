@@ -51,5 +51,10 @@
     "settingsScreenTitle": "Configuración",
     "languageScreenTitle": "Idioma",
     "plansBottomTabTitle": "Planes",
-    "settingsBottomTabTitle": "Configuración"
+    "settingsBottomTabTitle": "Configuración",
+    "helpScreenTitle": "Ayuda",
+    "aboutUsScreenTitle": "Acerca de nosotros",
+
+    "helpScreenOnProgress": "La pantalla de 'Ayuda' está en construcción",
+    "aboutUsScreenOnProgress": "La pantalla 'Acerca de nosotros' está en construcción"
 }
