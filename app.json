@@ -22,9 +22,18 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "packagerOpts": { 
+    "packagerOpts": {
       "config": "metro.config.js",
-      "sourceExts": ["js", "jsx", "svg", "svgx"],
-      "transformer": "node_modules/react-native-svg-transformer/index.js"}
+      "sourceExts": [
+        "js",
+        "jsx",
+        "svg",
+        "svgx"
+      ],
+      "transformer": "node_modules/react-native-svg-transformer/index.js"
+    },
+    "android": {
+      "package": "com.myworkout"
     }
+  }
 }
