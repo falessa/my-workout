@@ -17,7 +17,7 @@ function ButtomTabNavigator() {
             <TabBarLabel labelText={t('plansBottomTabTitle')} focused={focused}/>
         ),
         tabBarIcon: ({ focused }) => (
-            <TabBarIcon iconName={'ios-paper'} focused={focused}/>
+            <TabBarIcon iconName={'file-tray-full'} focused={focused}/>
         )
     }
 
