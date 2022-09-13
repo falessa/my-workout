@@ -41,6 +41,7 @@ exports[`NoPlans tests Render NoPlans 1`] = `
   </Text>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}

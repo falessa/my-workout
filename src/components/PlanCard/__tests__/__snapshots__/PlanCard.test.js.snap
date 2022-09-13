@@ -16,6 +16,7 @@ exports[`PlanCard tests Render PlanCard 1`] = `
 >
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
