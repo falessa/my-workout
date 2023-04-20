@@ -3,7 +3,7 @@
 exports[`ExerciseCard tests Render ExerciseCard 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#eee",
       "borderRadius": 10,
@@ -15,7 +15,7 @@ exports[`ExerciseCard tests Render ExerciseCard 1`] = `
 >
   <Text
     style={
-      Object {
+      {
         "fontSize": 17,
         "fontWeight": "bold",
       }
@@ -25,7 +25,7 @@ exports[`ExerciseCard tests Render ExerciseCard 1`] = `
   </Text>
   <View
     style={
-      Object {
+      {
         "alignContent": "center",
         "flexDirection": "row",
         "justifyContent": "center",
@@ -49,8 +49,8 @@ exports[`ExerciseCard tests Render ExerciseCard 1`] = `
       removeClippedSubviews={false}
       renderItem={[Function]}
       scrollEventThrottle={50}
-      stickyHeaderIndices={Array []}
-      viewabilityConfigCallbackPairs={Array []}
+      stickyHeaderIndices={[]}
+      viewabilityConfigCallbackPairs={[]}
     >
       <View />
     </RCTScrollView>

@@ -4,7 +4,7 @@ exports[`NoPlans tests Render NoPlans 1`] = `
 <View>
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
       }
     }
@@ -15,7 +15,7 @@ exports[`NoPlans tests Render NoPlans 1`] = `
   </View>
   <Text
     style={
-      Object {
+      {
         "color": "#343a40",
         "fontSize": 22,
         "fontWeight": "bold",
@@ -28,7 +28,7 @@ exports[`NoPlans tests Render NoPlans 1`] = `
   </Text>
   <Text
     style={
-      Object {
+      {
         "color": "#495057",
         "fontSize": 16,
         "fontWeight": "normal",
@@ -40,6 +40,23 @@ exports[`NoPlans tests Render NoPlans 1`] = `
     noPlans
   </Text>
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -51,7 +68,7 @@ exports[`NoPlans tests Render NoPlans 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "backgroundColor": "#386fa4",
         "borderRadius": 20,
         "margin": 15,
@@ -62,7 +79,7 @@ exports[`NoPlans tests Render NoPlans 1`] = `
   >
     <Text
       style={
-        Object {
+        {
           "color": "white",
           "fontSize": 18,
           "fontWeight": "bold",

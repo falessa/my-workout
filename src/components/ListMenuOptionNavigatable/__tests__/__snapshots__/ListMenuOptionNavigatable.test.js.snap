@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListMenuOptionNavigatable tests Render ListMenuOptionNavigatable 1`] = `
+<View
+  style={
+    {
+      "alignItems": "stretch",
+      "backgroundColor": "#fff",
+      "borderBottomColor": "#eee",
+      "borderBottomWidth": 1,
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 10,
+      "width": "95%",
+    }
+  }
+>
+  <RCTScrollView
+    data={
+      [
+        "Option 1",
+        "Option 2",
+        "Option 3",
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <RNGestureHandlerButton
+          collapsable={false}
+          delayLongPress={600}
+          enabled={true}
+          exclusive={true}
+          handlerTag={1}
+          handlerType="NativeViewGestureHandler"
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+          touchSoundDisabled={false}
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            style={
+              {
+                "alignItems": "stretch",
+                "backgroundColor": "#fff",
+                "borderBottomColor": "#eee",
+                "borderBottomWidth": 1,
+                "flex": 1,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 10,
+                "width": "95%",
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "fontSize": 18,
+                }
+              }
+            >
+              Option 1
+            </Text>
+          </View>
+        </RNGestureHandlerButton>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <RNGestureHandlerButton
+          collapsable={false}
+          delayLongPress={600}
+          enabled={true}
+          exclusive={true}
+          handlerTag={2}
+          handlerType="NativeViewGestureHandler"
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+          touchSoundDisabled={false}
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            style={
+              {
+                "alignItems": "stretch",
+                "backgroundColor": "#fff",
+                "borderBottomColor": "#eee",
+                "borderBottomWidth": 1,
+                "flex": 1,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 10,
+                "width": "95%",
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "fontSize": 18,
+                }
+              }
+            >
+              Option 2
+            </Text>
+          </View>
+        </RNGestureHandlerButton>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <RNGestureHandlerButton
+          collapsable={false}
+          delayLongPress={600}
+          enabled={true}
+          exclusive={true}
+          handlerTag={3}
+          handlerType="NativeViewGestureHandler"
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+          touchSoundDisabled={false}
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            style={
+              {
+                "alignItems": "stretch",
+                "backgroundColor": "#fff",
+                "borderBottomColor": "#eee",
+                "borderBottomWidth": 1,
+                "flex": 1,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 10,
+                "width": "95%",
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "fontSize": 18,
+                }
+              }
+            >
+              Option 3
+            </Text>
+          </View>
+        </RNGestureHandlerButton>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

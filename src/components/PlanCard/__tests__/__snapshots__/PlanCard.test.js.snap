@@ -3,7 +3,7 @@
 exports[`PlanCard tests Render PlanCard 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#eee",
       "borderRadius": 10,
@@ -15,6 +15,23 @@ exports[`PlanCard tests Render PlanCard 1`] = `
   }
 >
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -26,14 +43,14 @@ exports[`PlanCard tests Render PlanCard 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "opacity": 1,
       }
     }
   >
     <Text
       style={
-        Object {
+        {
           "fontSize": 18,
           "fontWeight": "bold",
         }
