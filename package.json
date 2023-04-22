@@ -54,7 +54,7 @@
   },
   "private": true,
   "jest": {
-    "testEnvironment": "jsdom",
+    "testEnvironment": "node",
     "setupFiles": [
       "<rootDir>/src/jest/__mocks__/mock.js"
     ],
