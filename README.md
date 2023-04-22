@@ -1,4 +1,4 @@
-**How to start the project**
+**Requirements**
 1. node 18.5 
 
 **How to start the project**
