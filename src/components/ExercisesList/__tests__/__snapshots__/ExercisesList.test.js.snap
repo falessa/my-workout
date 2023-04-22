@@ -3,7 +3,7 @@
 exports[`ExercisesList tests Render ExercisesList 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "stretch",
       "backgroundColor": "#fff",
       "flex": 1,
@@ -15,14 +15,14 @@ exports[`ExercisesList tests Render ExercisesList 1`] = `
   <RCTScrollView
     ItemSeparatorComponent={[Function]}
     data={
-      Array [
-        Object {
+      [
+        {
           "kgs": "5",
           "name": "Squats",
           "repetitions": "12",
           "sets": "4",
         },
-        Object {
+        {
           "kgs": "2",
           "name": "Pushups",
           "repetitions": "15",
@@ -43,17 +43,18 @@ exports[`ExercisesList tests Render ExercisesList 1`] = `
     removeClippedSubviews={false}
     renderItem={[Function]}
     scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    viewabilityConfigCallbackPairs={Array []}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
   >
     <View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "#eee",
               "borderRadius": 10,
@@ -65,7 +66,7 @@ exports[`ExercisesList tests Render ExercisesList 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "fontSize": 17,
                 "fontWeight": "bold",
               }
@@ -75,7 +76,7 @@ exports[`ExercisesList tests Render ExercisesList 1`] = `
           </Text>
           <View
             style={
-              Object {
+              {
                 "alignContent": "center",
                 "flexDirection": "row",
                 "justifyContent": "center",
@@ -99,26 +100,27 @@ exports[`ExercisesList tests Render ExercisesList 1`] = `
               removeClippedSubviews={false}
               renderItem={[Function]}
               scrollEventThrottle={50}
-              stickyHeaderIndices={Array []}
-              viewabilityConfigCallbackPairs={Array []}
+              stickyHeaderIndices={[]}
+              viewabilityConfigCallbackPairs={[]}
             />
           </View>
         </View>
         <View
           style={
-            Object {
+            {
               "height": 15,
             }
           }
         />
       </View>
       <View
+        onFocusCapture={[Function]}
         onLayout={[Function]}
         style={null}
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "#eee",
               "borderRadius": 10,
@@ -130,7 +132,7 @@ exports[`ExercisesList tests Render ExercisesList 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "fontSize": 17,
                 "fontWeight": "bold",
               }
@@ -140,7 +142,7 @@ exports[`ExercisesList tests Render ExercisesList 1`] = `
           </Text>
           <View
             style={
-              Object {
+              {
                 "alignContent": "center",
                 "flexDirection": "row",
                 "justifyContent": "center",
@@ -164,8 +166,8 @@ exports[`ExercisesList tests Render ExercisesList 1`] = `
               removeClippedSubviews={false}
               renderItem={[Function]}
               scrollEventThrottle={50}
-              stickyHeaderIndices={Array []}
-              viewabilityConfigCallbackPairs={Array []}
+              stickyHeaderIndices={[]}
+              viewabilityConfigCallbackPairs={[]}
             />
           </View>
         </View>

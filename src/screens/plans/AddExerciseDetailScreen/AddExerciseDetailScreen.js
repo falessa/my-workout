@@ -7,7 +7,7 @@ import TextInput from '../../../components/TextInput'
 import TextSecondary from '../../../components/Text/TextSecondary/TextSecondary'
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
-import { v4 as uuid } from 'uuid';
+import * as Crypto from 'expo-crypto';
 
 const styles = StyleSheet.create({
     container: {
@@ -55,7 +55,7 @@ export default function App({ route, navigation }) {
     }
 
     const confirmSetDetail = () => {
-        setDetails.push({ id: uuid(), sets, repetitions, kgs })
+        setDetails.push({ id: Crypto.randomUUID(), sets, repetitions, kgs })
         hideSetDetailComponent();
     }
 

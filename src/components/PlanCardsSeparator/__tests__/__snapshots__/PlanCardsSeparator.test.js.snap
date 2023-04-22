@@ -3,7 +3,7 @@
 exports[`PlanCardsSeparator tests Render PlanCardsSeparator 1`] = `
 <View
   style={
-    Object {
+    {
       "height": 15,
     }
   }

@@ -4,7 +4,7 @@ const reactPreset = require('babel-preset-jest');
 
 module.exports = {
   process(src, filename) {
-    const code = babel.transform(
+    const { code } = babel.transform(
       `
         import React from 'react'; 
         export default () => (<svg data-filename="${path.relative(process.cwd(), filename)}" />);
@@ -14,7 +14,7 @@ module.exports = {
         presets: [reactPreset],
         retainLines: true,
       }
-    ).code;
-    return code;
+    );
+    return { code };
   },
 };

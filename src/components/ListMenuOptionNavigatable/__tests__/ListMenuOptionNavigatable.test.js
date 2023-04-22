@@ -3,7 +3,7 @@ import React from "react";
 import { create } from "react-test-renderer";
 import ListMenuOptionNavigatable from '../ListMenuOptionNavigatable';
 
-describe.skip('ListMenuOptionNavigatable tests', () => {
+describe('ListMenuOptionNavigatable tests', () => {
     const props = {
         options: [
             "Option 1",

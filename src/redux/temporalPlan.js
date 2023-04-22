@@ -1,5 +1,4 @@
-import 'react-native-get-random-values';
-import { v4 as uuid } from 'uuid';
+import * as Crypto from 'expo-crypto';
 
 const initialState = {}
 
@@ -32,7 +31,7 @@ export default (state = initialState, action) => {
     switch(action.type) {
         case CREATE_TEMPORAL_PLAN: {
             console.log('CREATE TEMPORAL PLAN')
-            const newTemporalPlan = { ...action.payload, id: uuid() }
+            const newTemporalPlan = { ...action.payload, id: Crypto.randomUUID() }
             return newTemporalPlan
         }
         case UPDATE_TEMPORAL_PLAN: {
