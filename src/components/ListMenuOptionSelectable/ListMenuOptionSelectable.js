@@ -70,7 +70,7 @@ const ListMenuOptionSelectable = ({ options }) => {
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={languageStored === item ? styles.optionSelected : styles.text}>{t(item)}</Text>
                             {languageStored === item
-                                ? <Ionicons name='md-checkmark' size={22} color={'#386fa4'} />
+                                ? <Ionicons name='checkmark' size={22} color={'#386fa4'} />
                                 : <></>
                             }
                         </View>

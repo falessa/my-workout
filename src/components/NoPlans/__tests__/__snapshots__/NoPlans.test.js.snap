@@ -10,7 +10,7 @@ exports[`NoPlans tests Render NoPlans 1`] = `
     }
   >
     <svg
-      data-filename="assets/svg/personal_training.svgx"
+      data-filename="assets/svg/personal_training.svg"
     />
   </View>
   <Text
