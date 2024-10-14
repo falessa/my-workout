@@ -79,7 +79,7 @@ export default function App({ route, navigation }) {
                             <TextSecondary text={item.sets + " " + t('sets')}/>
                             <TextSecondary text={item.repetitions + " " + t('repetitions')} style={styles.textInput}/>
                             <TextSecondary text={item.kgs + " " + t('kgs')} style={styles.textInput}/>
-                            <Ionicons name="md-trash" size={26} color="black" style={{padding: 7}} onPress={() => { deleteSetDetail(item.id) }}/>
+                            <Ionicons name="trash-bin" size={26} color="black" style={{padding: 7}} onPress={() => { deleteSetDetail(item.id) }}/>
                         </View>
                     }
                 />
@@ -94,7 +94,7 @@ export default function App({ route, navigation }) {
 
             <View style={{ flexDirection: 'row' }}>
                 <TextSecondary text={t('enterSetDetails')}/>
-                <Ionicons name="md-add-circle-outline" size={26} color="black" style={{padding: 7}} onPress={()=> { renderSetDetailComponent() } }/>
+                <Ionicons name="add-circle" size={26} color="black" style={{padding: 7}} onPress={()=> { renderSetDetailComponent() } }/>
             </View>
 
             { showSetDetailComp &&
@@ -102,8 +102,8 @@ export default function App({ route, navigation }) {
                     <TextInput keyboardType='number-pad' placeholder={t('sets')} onChangeText={sets => setSets(sets)}/>
                     <TextInput keyboardType='numeric' placeholder={t('repetitions')} onChangeText={repetitions => setReps(repetitions)}/>
                     <TextInput keyboardType='numeric' placeholder={t('kgs')} onChangeText={kgs => setKgs(kgs)} />
-                    <Ionicons name="md-checkmark" size={26} color="black" style={{padding: 7}} onPress={confirmSetDetail}/>
-                    <Ionicons name="md-trash" size={26} color="black" style={{padding: 7}} onPress={hideSetDetailComponent}/>
+                    <Ionicons name="checkmark-circle" size={26} color="black" style={{padding: 7}} onPress={confirmSetDetail}/>
+                    <Ionicons name="trash-bin" size={26} color="black" style={{padding: 7}} onPress={hideSetDetailComponent}/>
                 </View>
             }
 

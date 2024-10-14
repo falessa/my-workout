@@ -26,7 +26,7 @@ function ButtomTabNavigator() {
             <TabBarLabel labelText={t('settingsBottomTabTitle')} focused={focused}/>
         ),
         tabBarIcon: ({ focused }) => (
-            <TabBarIcon iconName={'md-settings'} focused={focused}/>
+            <TabBarIcon iconName={'settings'} focused={focused}/>
         )
     }
 
