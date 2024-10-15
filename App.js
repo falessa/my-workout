@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Provider } from 'react-redux';
 import { App } from './src'
-import { store, persistor } from './src/redux/store'
+import { store, persistor } from './src/storeManagement/store'
 import { PersistGate } from 'redux-persist/integration/react'
 
 export default function () {

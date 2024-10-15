@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { addExerciseToDayPlan } from '../../../redux/temporalPlan'
+import { addExerciseToDayPlan } from '../../../storeManagement/temporalPlanSlice';
 import { StyleSheet, View, FlatList } from 'react-native';
 import MainButton from '../../../components/MainButton'
 import TextInput from '../../../components/TextInput'

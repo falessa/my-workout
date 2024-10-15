@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native';
 import MainButton from '../../../components/MainButton'
 import TextInput from '../../../components/TextInput'
 import TextSecondary from '../../../components/Text/TextSecondary/TextSecondary'
-import { createTemporalPlan } from '../../../redux/temporalPlan'
+import { createTemporalPlan } from '../../../storeManagement/temporalPlanSlice';
 import { useTranslation } from 'react-i18next';
 
 
@@ -28,7 +28,7 @@ export default function App({ navigation }) {
 
     const [planName, setName] = useState('')
     const [daysPerWeek, setDaysPerWeek] = useState('')
-    let dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const createEmptyPlanDetails = (daysPerWeek) => {
         // add plan details array to the temporal plan that is being created
