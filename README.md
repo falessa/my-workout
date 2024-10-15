@@ -69,10 +69,11 @@ Logs for your project will appear below. Press Ctrl+C to exit.
 
 ## Run tests <a name="run-tests-"></a>
 
+Tests run on **Github Actions** on every push to the remote repository. You can run the tests locally by running the following command: 
+
 ```
 $ yarn test
 ```
-Every push or new pull request into the remote repository triggers a Github action that will also run the tests automatically.
 
 **How to update test snapshots**
 
