@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch} from 'react-redux'
 import { StyleSheet, Text, View, Button } from 'react-native';
-import { addPlan, resetPlansToInitialState } from '../../redux/plans'
+import { addPlan, resetPlansToInitialState } from '../../storeManagement/plansSlice';
 import NoPlans from '../../components/NoPlans/NoPlans'
 import PlansList from '../../components/PlansList/PlansList';
 

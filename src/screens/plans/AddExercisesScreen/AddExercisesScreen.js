@@ -7,7 +7,7 @@ import ExerciseDayButton from '../../../components/ExerciseDayButton'
 import ExercisesList from '../../../components/ExercisesList/ExercisesList';
 import NoExercises from '../../../components/NoExercises/NoExercises';
 import MainButton from '../../../components/MainButton'
-import { addPlan } from '../../../redux/plans'
+import { addPlan } from '../../../storeManagement/plansSlice'
 import { useTranslation } from 'react-i18next';
 
 const styles = StyleSheet.create({
