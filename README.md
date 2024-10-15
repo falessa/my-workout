@@ -1,9 +1,10 @@
-Table of contents:
-- [Minimum requirements ](#minimum-requirements-)
-- [Installation ](#installation-)
-- [Execution ](#execution-)
-- [Run tests ](#run-tests-)
-- [Screenshots ](#screenshots-)
+# Table of contents:
+- [Table of contents:](#table-of-contents)
+  - [Minimum requirements ](#minimum-requirements-)
+  - [Installation ](#installation-)
+  - [Execution ](#execution-)
+  - [Run tests ](#run-tests-)
+  - [Screenshots ](#screenshots-)
 
 ## Minimum requirements <a name="minimum-requirements-"></a>
   - Node 18.5
