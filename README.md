@@ -27,7 +27,7 @@ $ npx expo start
 
 You'll see a screen like the one below. Follow the instructions and choose where you'd like to execute the app. 
 
-If you select iOS or Android, the respective simulator should be already up and running. For iOS use Xcode, and for Android you can use the ADV Manager from Android Studio.
+If you select iOS or Android, the respective simulator should be already up and running. For iOS use Xcode, and for Android you can use the Device Manager from Android Studio.
 
 ```
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
