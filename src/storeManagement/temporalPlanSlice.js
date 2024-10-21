@@ -8,7 +8,6 @@ const temporalPlanSlice = createSlice({
     initialState: initialState,
     reducers: {
         createTemporalPlan: (state, action) => {
-            console.log('CREATE TEMPORAL PLAN - SLICE')
             const newTemporalPlan = { ...action.payload, id: Crypto.randomUUID() }
             return newTemporalPlan
         },
@@ -23,7 +22,6 @@ const temporalPlanSlice = createSlice({
             // return initialState
         },
         addExerciseToDayPlan: (state, action) => {
-            console.log('ADD EXERCISE TO DAY PLAN - SLICE', action.payload)
             const planDay = action.payload.day
             const name = action.payload.name
             const setDetails = action.payload.setDetails
